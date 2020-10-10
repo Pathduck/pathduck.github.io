@@ -1,0 +1,28 @@
+body {
+	font-family: Courier;
+	color: lime;
+	background-color: black;
+}
+
+a img {
+	border: none;
+}
+
+
+a:link {
+	color: #9a7f49;
+}
+
+a:visited {
+	color: #666699;
+}
+
+a:hover, a:active, a:focus {
+	color: #99ff33;
+	text-decoration: none;
+}
+
+
+.noshow {
+	display: none;
+}
