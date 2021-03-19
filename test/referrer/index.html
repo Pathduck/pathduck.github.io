@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Referrer-policy test page</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="icon" href="/favicon.ico" sizes="32x32" />
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="/style.css" />
+	</head>
+	<body>
+		<iframe width="500" height="300" src="default.html"></iframe> 
+		<iframe width="500" height="300" src="no-referrer.html"></iframe> 
+		<iframe width="500" height="300" src="no-referrer-when-downgrade.html"></iframe>
+		<iframe width="500" height="300" src="origin.html"></iframe> 
+		<iframe width="500" height="300" src="origin-when-cross-origin.html"></iframe> 
+		<iframe width="500" height="300" src="same-origin.html"></iframe>
+		<iframe width="500" height="300" src="strict-origin.html"></iframe>
+		<iframe width="500" height="300" src="strict-origin-when-cross-origin.html"></iframe> 
+		<iframe width="500" height="300" src="unsafe-url.html"></iframe>
+	</body>
+</html>
