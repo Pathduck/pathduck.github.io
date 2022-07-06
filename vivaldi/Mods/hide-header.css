@@ -1,0 +1,31 @@
+/* Hide header when tabs not on top */
+#browser:not(.tabs-top) #header {
+	min-height: 0;
+}
+
+/* Set UrlBar l/r padding */
+#browser:not(.tabs-top) .UrlBar {
+	padding-left: 30px;
+	padding-right: 130px
+}
+
+/* Fix V icon size */
+#browser:not(.tabs-top) .vivaldi svg {
+	height: 22px;
+	width: 22px;
+}
+
+/* Reset header on windowed/minimal-ui/bottom-UrlBar */
+#browser.normal #header,
+#browser.minimal-ui #header,
+#browser.address-bottom #header {
+	min-height: 25px;
+}
+
+/* Reset UrlBar on windowed/minimal-ui/bottom-UrlBar */
+#browser.normal .UrlBar,
+#browser.minimal-ui .UrlBar,
+#browser.address-bottom .UrlBar {
+	padding-left: unset;
+	padding-right: unset;
+}

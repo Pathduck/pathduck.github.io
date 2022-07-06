@@ -1,0 +1,118 @@
+/* CUSTOM CSS for Vivaldi */
+
+/* Vivaldi logo */
+.vivaldi-v, .vivaldi-horizontal-icon {opacity: 1 !important;}
+.vivaldi-v svg, .vivaldi-horizontal-icon svg {background: radial-gradient(white, white 50%, transparent 50%); fill: #383838;} 
+
+/* SiteInfo hide text  */
+.SiteInfoButton .siteinfo-text {
+	display: none;
+}
+
+/* SiteInfo V logo  */
+.SiteInfoButton.internal svg path, .SiteInfoButton.warning svg path {
+	d: path("M10.4 5c-.4-.8 0-1.8 1-2 .7 0 1.5.4 1.6 1.2a1.4 1.4 0 0 1-.2 1l-4 7c-.3.5-.7.8-1.2.8-.6 0-1-.2-1.3-.7L3.8 7.8 2.2 5c-.5-.8 0-2 1-2 .7 0 1 .2 1.4.7l1 2 1 1.4a2 2 0 0 0 1.7 1.5 2.2 2.2 0 0 0 2.3-2V6c0-.3 0-.6-.2-1z");
+}
+
+/* SiteInfo old style lock */
+.SiteInfoButton.secure svg path, .SiteInfoButton.certified svg path {
+	d: path("M12.2 6.7C12.2 4 10.5 2 8 2 5.8 2 3.8 4 3.8 6.7V7H3v7h10V7h-.8v-.3zM10.7 8H5.3V6.7c0-1.7 1.4-3 2.8-3 1.7 0 2.8 1.3 2.8 3V8z");
+	fill: #00a100;
+}
+
+/* SiteInfo secure background colour */
+.SiteInfoButton.secure, .SiteInfoButton.certified {
+	background-color: #004400;
+	height: 22px;
+	width: 22px;
+}
+
+/* URL Bar scheme part */
+.UrlFragment--Lowlight:first-of-type {
+	color: var(--colorFgFadedMost);
+}
+
+/* URL Bar host part  */
+.UrlFragment-HostFragment-Subdomain, .UrlFragment-HostFragment-Basedomain, .UrlFragment-HostFragment-TLD {
+	color: var(--colorFgIntense) !important;
+	font-weight: bold;
+}
+
+/* Security blocked content warning hide */
+.UrlBar-AddressField .permission-popup.is-blocking {
+	display: none;
+}
+
+/* Content blocker button hide */
+.UrlBar-AddressField .ContentBlocker-Control {
+	display: none;
+}
+
+/* Translate button hide */
+.UrlBar-AddressField .ToolbarButton-Button[title^="Translate"] {
+	display: none;
+}
+
+/* Toggle extension button */
+.toolbar-extensions svg path {
+	d: path("M10 13l3.634-3.634c.504-.504 1.366-.147 1.366.566v6.137c0 .713-.862 1.07-1.366.566l-3.634-3.634z");
+	opacity: .5;
+}
+
+/* Toolbar buttons keyboard focus */
+.toolbar-extensions .button-toolbar:focus-within,
+.toolbar-mainbar .button-toolbar:focus-within {
+	background-color: var(--colorAccentBgDark);
+	/* outline: 2px solid var(--colorHighlightBg); */
+	/* outline-offset: -3px; */
+}
+
+/* Address + Search field icons dimmed */
+.toolbar-insideinput button {
+	opacity: 0.75;
+}
+
+/* Trashcan dimmed */
+.button-toolbar.toggle-trash button {
+	transition: opacity 200ms;
+	opacity: 0.2;
+}
+
+/* Bookmark button fill colour */
+.bookmark-animated-fill {
+	fill: var(--colorAccentBgFaded) !important;
+}
+
+/* Panels switch buttons */
+#switch > button.panelbtn img {
+	filter: drop-shadow(0 0 1px white);
+}
+
+/* Bookmarks Panel input width */
+.addbookmark-cardwrapper {
+	width: 100%;
+}
+
+/* Bookmarks Panel thumbnails hide */
+.addbookmark-cardwrapper .preview {
+	display: none !important;
+}
+
+/* Unread tabs bold font */
+.tab-strip .tab.unread {
+    font-weight: bold;
+}
+
+/* Tab tooltip hide image */
+#vivaldi-tooltip .tooltip .tooltip-item .thumbnail-image {
+  display: none;
+}
+
+/* Tab tooltip size */
+#vivaldi-tooltip .tooltip .tab-group .tooltip-item {
+  width: 250px;
+  height: auto;
+}
+
+/* Hide Extension buttons */
+.button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
