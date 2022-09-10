@@ -4,7 +4,7 @@
 .vivaldi-v, .vivaldi-horizontal-icon {opacity: 1 !important;}
 .vivaldi-v svg, .vivaldi-horizontal-icon svg {background: radial-gradient(white, white 50%, transparent 50%); fill: #383838;} 
 
-/* SiteInfo hide text  */
+/* SiteInfo hide text */
 .SiteInfoButton .siteinfo-text {
 	display: none;
 }
@@ -38,33 +38,27 @@
 	font-weight: bold;
 }
 
-/* Security blocked content warning hide */
-.UrlBar-AddressField .permission-popup.is-blocking {
-	display: none;
-}
-
-/* Content blocker button hide */
-.UrlBar-AddressField .ContentBlocker-Control {
-	display: none;
-}
-
-/* Translate button hide */
+/* Hide AddressField stuff */
+.UrlBar-AddressField .permission-popup.is-blocking,
+.UrlBar-AddressField .UrlBar-UrlObfuscationWarning,
+.UrlBar-AddressField .ContentBlocker-Control, 
 .UrlBar-AddressField .ToolbarButton-Button[title^="Translate"] {
 	display: none;
 }
 
-/* Toggle extension button */
+/* Extensions toggle button */
 .toolbar-extensions svg path {
 	d: path("M10 13l3.634-3.634c.504-.504 1.366-.147 1.366.566v6.137c0 .713-.862 1.07-1.366.566l-3.634-3.634z");
 	opacity: .5;
 }
+/* Extensions buttons background */
+.ExtensionDropdownIcon, .ExtensionIcon {
+	background-color: var(--colorAccentBg) !important;
+}
 
 /* Toolbar buttons keyboard focus */
-.toolbar-extensions .button-toolbar:focus-within,
-.toolbar-mainbar .button-toolbar:focus-within {
-	background-color: var(--colorAccentBgDark);
-	/* outline: 2px solid var(--colorHighlightBg); */
-	/* outline-offset: -3px; */
+.button-toolbar:focus-within, .button-toolbar:hover {
+	background-color: var(--colorAccentBgDark) !important;
 }
 
 /* Address + Search field icons dimmed */
@@ -116,3 +110,8 @@
 
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
+
+/* TEMP(?) fix for url bar dropdown */
+.OmniLinkItem--Highlighted, OmniLinkItem:hover {
+    background-color: var(--colorHighlightBg) !important;
+}

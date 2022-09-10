@@ -4,7 +4,7 @@
 .vivaldi-v, .vivaldi-horizontal-icon {opacity: 1 !important;}
 .vivaldi-v svg, .vivaldi-horizontal-icon svg {background: radial-gradient(white, white 50%, transparent 50%); fill: #383838;} 
 
-/* SiteInfo hide text  */
+/* SiteInfo hide text */
 .SiteInfoButton .siteinfo-text {
 	display: none;
 }
@@ -59,8 +59,6 @@
 /* Toolbar buttons keyboard focus */
 .button-toolbar:focus-within, .button-toolbar:hover {
 	background-color: var(--colorAccentBgDark) !important;
-	/* outline: 2px solid var(--colorHighlightBg); */
-	/* outline-offset: -3px; */
 }
 
 /* Address + Search field icons dimmed */
@@ -113,7 +111,7 @@
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
 
-/* Temporary fix for url bar dropdown */
+/* TEMP(?) fix for url bar dropdown */
 .OmniLinkItem--Highlighted, OmniLinkItem:hover {
     background-color: var(--colorHighlightBg) !important;
 }
