@@ -1,11 +1,15 @@
 /* Speed Dials Mods */
-.speeddial, .SpeedDialView-Head, .SpeedDialView-Head:empty {
-	margin-top: 1em;
+.SpeedDialView-Head, .SpeedDialView-Head:empty {
+	margin: 1em auto;
+}
+
+/* Settings button focus outline */
+.SpeedDialView-Settings-Button:focus {
+    outline: 2px solid var(--colorHighlightBg);
 }
 
 /* Speed Dials search field position (if shown) */
 .sdwrapper .iconmenu-container.SearchField {
-	margin: 1em auto 0;
 	background: var(--colorBgAlphaHeavy);
 }
 
@@ -23,8 +27,8 @@
 
 /* Speed Dials thumbnail */
 .speeddial .dial .thumbnail-image {
-	/* background: rgba(25,25,25,0.4); */
 	padding: 1em;
+	/* background: rgba(25,25,25,0.4); */
 }
 
 /* Speed Dials thumbnail fit container */

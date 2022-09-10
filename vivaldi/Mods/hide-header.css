@@ -3,29 +3,37 @@
 	min-height: 0;
 }
 
+/* Make sure buttons are in front */
+#browser:not(.tabs-top) .vivaldi,
+#browser:not(.tabs-top) .window-buttongroup {
+    z-index: 10;
+}
+
 /* Set UrlBar l/r padding */
-#browser:not(.tabs-top) .UrlBar {
+#browser:not(.tabs-top) .toolbar-mainbar {
 	padding-left: 30px;
 	padding-right: 130px
 }
 
-/* Fix V icon size */
-#browser:not(.tabs-top) .vivaldi svg {
+/* Override V icon size */
+#browser .vivaldi svg {
 	height: 22px;
 	width: 22px;
 }
 
-/* Reset header on windowed/minimal-ui/bottom-UrlBar */
+/* Reset header on windowed/minimal-ui/bottom-UrlBar/horizontal-menu */
 #browser.normal #header,
 #browser.minimal-ui #header,
-#browser.address-bottom #header {
+#browser.address-bottom #header
+#browser.horizontal-menu #header {
 	min-height: 25px;
 }
 
-/* Reset UrlBar on windowed/minimal-ui/bottom-UrlBar */
-#browser.normal .UrlBar,
-#browser.minimal-ui .UrlBar,
-#browser.address-bottom .UrlBar {
+/* Reset header on windowed/minimal-ui/bottom-UrlBar/horizontal-menu */
+#browser.normal .toolbar-mainbar,
+#browser.minimal-ui .toolbar-mainbar,
+#browser.address-bottom .toolbar-mainbar,
+#browser.horizontal-menu .toolbar-mainbar {
 	padding-left: unset;
 	padding-right: unset;
 }
