@@ -1,0 +1,50 @@
+.content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.center {
+	text-align: center;
+}
+
+body img {
+	border: 0;
+}
+
+/* This does not work in FF unless I 
+set the enclosing block width.  */
+.content img {
+	max-width: 95%;
+}
+
+.imgpost {
+	display: inline-block;
+	max-width: 95%;
+}
+
+.imgpost p {
+	width: 200px;
+	max-width: 95%;
+	margin: 0.3em auto;
+	font-size: small;
+
+}
+
+.imgfloat {
+	max-width: 95%;
+	margin: 0.25em;
+	text-align: center;
+}
+
+.imgfloat p {
+	width: 175px;
+	max-width: 95%;
+	font-size: small;
+	margin: 0;
+}	
+
+.picleft {
+	float: left;
+	margin-right: 0.5em;
+	margin-left: 0;
+}
