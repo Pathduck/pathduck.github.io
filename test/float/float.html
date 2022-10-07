@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <title>
+         Floating image test case
+      </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+      <link rel="stylesheet" type="text/css" media="screen, projection" href="float.css" />
+  </head>
+   <body>
+
+<div class="content">
+
+<h4>Floated Image</h4>
+<div class="imgfloat picleft">
+<img src="b3tatv.gif" alt="[Image Caption]" /><p>[Image Caption]</p>
+</div>
+
+<p>Image floated to the left with caption and <code>max-width: 95%</code>, works in Opera 8 and MSIE 6 but not in Firefox,
+which seems to have problems with the max-width attribute.</p>
+<p>When the ARPANET was originally created, and for much of its subsequent evolution into the Internet prior to the mass pile-on of the 1990's, access was highly accountable. Every machine on the Internet had a unique Internet Protocol (IP) address, the 32 bit number you usually see written in "dotted quad" form, such as 192.168.114.31. Virtually all machines on the Internet were permanently connected via dedicated leased lines (or on a local network, itself linked to the outside by a leased line). IP addresses were permanently assigned, one per machine, from blocks of contiguous addresses allocated to organisations to whom was delegated the responsibility of assigning addresses within that block. An organisation responsible for an IP address block could, in turn, delegate assignment of addresses within a sub-block to another entity but, in every case, it was possible to determine who was ultimately responsible for an address on the Internet.</p>
+
+<h4>Images centered with captions below</h4>
+<p>Inspired by <a href="http://www.alistapart.com/articles/practicalcss">this article</a>, but I wanted to make the images centered, 
+not floated left. This works in Opera 8 but not in MSIE 6 or Firefox as they do not seem to support <code>display: inline-block</code>,
+also the captions do not align with the images in FF:</p>
+
+<div class="center">
+    <div class="imgpost"><img src="b3tatv.gif" alt="[Image Caption]" /><p>[Image Caption]</p></div>
+    <div class="imgpost"><img src="b3tatv.gif" alt="[Image Caption]" /><p>[Image Caption]</p></div>
+    <div class="imgpost"><img src="b3tatv.gif" alt="[Image Caption]" /><p>[Quite a bit longer Image Caption]</p></div>
+    <div class="imgpost"><img src="b3tatv.gif" alt="[Image Caption]" /><p>[Image Caption]</p></div>
+</div>
+
+</div>
+
+   </body>
+</html>
