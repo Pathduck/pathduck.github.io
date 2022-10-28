@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Name: Nostalgia C64
+Name: Nostalgia
 Version: 1.10
 Author: Opera Software ASA
 Description: This style sheet attempts to simulate surfing the Web with a browser written in the early 1980s.
@@ -28,14 +28,10 @@ iframe {content: "IFRAME removed" !important;}
 iframe[title] {content: attr(title) !important;}
 iframe[longdesc] {content: attr(longdesc) !important;}
 
-img {
-	filter: contrast(1000%);
-	max-width: 96px !important;
-}
-
-iframe, img[alt], img[title] {
+iframe, img {
+	display: block;
 	padding: 0.2em !important;
-	max-width: 96px !important;
+	max-width: 25% !important;
 	max-height: none !important;
 	width: auto !important;
 	height: auto !important;
@@ -85,7 +81,7 @@ hr {
 
 	position: static !important;
 	float: none !important;
-	max-width: 100% !important;
+	max-width: 80vw !important;
 	min-width: 0px !important;
 	width: auto !important;
 	max-height: none !important;
@@ -109,7 +105,6 @@ html:after {
 	margin: 0em !important;
 	padding: 0em 0em 0em 2px !important;
 	content: "\2588" !important;
-
 	background: #352879 !important;	/*Blue*/
 	color: #6C5EB5 !important;	/*Light blue*/
 	text-decoration: blink !important;
@@ -167,14 +162,9 @@ title {
 
 title:before {content: 'LOAD "' !important;}
 
-title:after {white-space: pre-wrap; content: '",8 \A LOADING' !important;}
+title:after {content: '",8\ALOADING' !important;}
 
-table, caption, tr, thead, tfoot, tbody, th, td {
-	display: block !important;
-	text-align: left !important;
-}
-
-pre {white-space: pre-wrap !important;}
+pre {white-space: -pre-wrap !important;}
 
 input, textarea, select {max-width: 38em !important;}
 
