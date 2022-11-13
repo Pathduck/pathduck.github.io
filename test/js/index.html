@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Input focus test</title>
+  <title>Javascript Tests</title>
 </head>
 <body>
-	<script>document.write("Hello World!");</script>
-	<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
-	<p id="demo"></p>
+
+<h3>Hello World</h3>	
+<script>document.write("Click here:");</script>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<pre id="demo"></pre>
+
+<h3>REST Test</h3>	
+<button onclick="callWs()">Fetch</button><br>
+<b>HTTP Response: </b><code id="result"></code><br>
+<b>JSON Response: </b><code id="result_json"></code>
+
+<script src="functions.js"></script> 
+
 </body>
 </html>
