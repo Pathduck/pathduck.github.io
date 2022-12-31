@@ -1,0 +1,17 @@
+<html>
+<head>
+  <style>
+    div#test { background: red; width: 200px; height: 200px; }
+    @media (display-mode: fullscreen) {
+        div#test {background: blue; width: 200px; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="test"> 
+  </div>
+  <button onclick="document.body.requestFullscreen();">
+    go fullscreen
+  </button>
+</body>
+</html>
