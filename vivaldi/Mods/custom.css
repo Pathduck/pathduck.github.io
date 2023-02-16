@@ -4,9 +4,17 @@
 .vivaldi-v, .vivaldi-horizontal-icon {opacity: 1 !important;}
 .vivaldi-v svg, .vivaldi-horizontal-icon svg {background: radial-gradient(white, white 50%, transparent 50%); fill: #383838;} 
 
-/* SiteInfo hide text */
-.SiteInfoButton .siteinfo-text {
-	display: none;
+/* Skinnier mainbar */
+.toolbar-mainbar,
+.toolbar-mainbar .button-toolbar button,
+.toolbar-mainbar .toolbar-extensions,
+.toolbar-mainbar .toolbar-extensions .button-toolbar button {
+    height: 30px;
+}
+
+/* Skinnier mainbar fix for BookmarkButton */
+.UrlBar-AddressField .BookmarkButton button {
+	height: 100%;
 }
 
 /* SiteInfo V logo  */
@@ -27,15 +35,9 @@
 	width: 22px;
 }
 
-/* URL Bar scheme part */
-.UrlFragment--Lowlight:first-of-type {
-	color: var(--colorFgFadedMost);
-}
-
-/* URL Bar host part  */
-.UrlFragment-HostFragment-Subdomain, .UrlFragment-HostFragment-Basedomain, .UrlFragment-HostFragment-TLD {
-	color: var(--colorFgIntense) !important;
-	font-weight: bold;
+/* SiteInfo hide EV/Not Secure text */
+.SiteInfoButton .siteinfo-text {
+	display: none;
 }
 
 /* Hide AddressField stuff */
@@ -46,8 +48,19 @@
 	display: none;
 }
 
+/* AddressField URL  scheme part */
+.UrlFragment--Lowlight:first-of-type {
+	color: var(--colorFgFadedMost);
+}
+
+/* AddressField URL host part  */
+.UrlFragment-HostFragment-Subdomain, .UrlFragment-HostFragment-Basedomain, .UrlFragment-HostFragment-TLD {
+	color: var(--colorFgIntense) !important;
+	font-weight: bold;
+}
+
 /* Extensions toggle button */
-.toolbar-extensions svg path {
+.toolbar-extensions button svg path {
 	d: path("M10 13l3.634-3.634c.504-.504 1.366-.147 1.366.566v6.137c0 .713-.862 1.07-1.366.566l-3.634-3.634z");
 	opacity: .5;
 }
@@ -92,6 +105,11 @@
 	display: none !important;
 }
 
+/* Hide Image Properties button */
+.webpageview button.inspector {
+	display: none;
+}
+
 /* Unread tabs bold font */
 .tab-strip .tab.unread {
     font-weight: bold;
@@ -110,8 +128,3 @@
 
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
-
-/* TEMP(?) fix for url bar dropdown */
-.OmniLinkItem--Highlighted, OmniLinkItem:hover {
-    background-color: var(--colorHighlightBg) !important;
-}

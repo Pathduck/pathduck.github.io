@@ -46,3 +46,8 @@ body {
 .tabswitcher.list .listed-tabs::-webkit-scrollbar {
   display: none;
 }
+
+/* TEMP(?) fix for url bar dropdown */
+.OmniLinkItem--Highlighted, OmniLinkItem:hover {
+    background-color: var(--colorHighlightBg) !important;
+}

@@ -15,5 +15,5 @@
 
 /* Tabcycler hide scrollbar */
 .tabswitcher.list .listed-tabs::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
