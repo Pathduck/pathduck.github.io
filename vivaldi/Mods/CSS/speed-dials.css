@@ -5,7 +5,7 @@
 
 /* Settings button focus outline */
 .SpeedDialView-Settings-Button:focus {
-    outline: 2px solid var(--colorHighlightBg);
+	outline: 2px solid var(--colorHighlightBg);
 }
 
 /* Speed Dials search field position (if shown) */
