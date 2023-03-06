@@ -5,15 +5,15 @@
 .vivaldi-v svg, .vivaldi-horizontal-icon svg {background: radial-gradient(white, white 50%, transparent 50%); fill: #383838;} 
 
 /* Skinnier mainbar */
-.toolbar-mainbar,
-.toolbar-mainbar .button-toolbar button,
-.toolbar-mainbar .toolbar-extensions,
-.toolbar-mainbar .toolbar-extensions .button-toolbar button {
+.mainbar>.toolbar-mainbar,
+.mainbar>.toolbar-mainbar .button-toolbar button,
+.mainbar>.toolbar-mainbar .toolbar-extensions,
+.mainbar>.toolbar-mainbar .toolbar-extensions .button-toolbar button {
 	height: 30px;
 }
 
 /* Skinnier mainbar - fix BookmarkButton focus */
-.UrlBar-AddressField .BookmarkButton button {
+.toolbar-mainbar .UrlBar-AddressField .BookmarkButton button {
 	height: 100%;
 }
 

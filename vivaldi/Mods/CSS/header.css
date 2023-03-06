@@ -1,6 +1,11 @@
 /* Hide header if tabs not on top */
 #browser:not(.tabs-top) #header {
-	min-height: 0px;
+	min-height: 0px !important;
+}
+
+/* Hide page title (Start Page for some reason shows this) */
+#browser:not(.tabs-top):not(.minimal-ui):not(.normal) #pagetitle {
+    display: none;
 }
 
 /* Set mainbar/bookmark-bar l/r padding */
@@ -50,10 +55,10 @@
 
 /* Reset header on windowed/minimal-ui/bottom-UrlBar/horizontal-menu */
 #browser.normal #header,
-#browser.minimal-ui #header,
+#browser.minimal-ui:not(.fullscreen) #header,
 #browser.address-bottom #header,
 #browser.horizontal-menu #header {
-	min-height: calc(25px / var(--uiZoomLevel));
+	min-height: calc(25px / var(--uiZoomLevel)) !important;
 }
 
 /* Reset header on windowed/minimal-ui/bottom-UrlBar/horizontal-menu */
