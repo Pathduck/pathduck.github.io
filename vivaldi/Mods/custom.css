@@ -5,15 +5,27 @@
 .vivaldi-v svg, .vivaldi-horizontal-icon svg {background: radial-gradient(white, white 50%, transparent 50%); fill: #383838;} 
 
 /* Skinnier mainbar */
-.toolbar-mainbar,
-.toolbar-mainbar .button-toolbar button,
-.toolbar-mainbar .toolbar-extensions,
-.toolbar-mainbar .toolbar-extensions .button-toolbar button {
-    height: 30px;
+.mainbar>.toolbar-mainbar,
+.mainbar>.toolbar-mainbar .button-toolbar button,
+.mainbar>.toolbar-mainbar .toolbar-extensions,
+.mainbar>.toolbar-mainbar .toolbar-extensions .button-toolbar button {
+	height: 30px;
 }
 
-/* Skinnier mainbar fix for BookmarkButton */
-.UrlBar-AddressField .BookmarkButton button {
+/* Skinnier mainbar - fix BookmarkButton focus */
+.toolbar-mainbar .UrlBar-AddressField .BookmarkButton button {
+	height: 100%;
+}
+
+/* Skinnier statusbar */
+#browser footer .toolbar-statusbar {
+    height: 20px;
+}
+#browser footer .toolbar-statusbar button {
+    height: 19px;
+}
+#browser footer .toolbar-statusbar .override.button-icon {
+	width: 100%;
 	height: 100%;
 }
 
@@ -40,6 +52,20 @@
 	display: none;
 }
 
+/* Remove panels switch top padding */
+#switch {
+	padding-top: unset;
+}
+
+/* Add drop-shadow to some buttons */
+#switch button img,
+.tab:not(.active) .favicon img,
+.OmniLinkItem-Favicon img,
+.SiteInfoButton-Favicon,
+.item-icon {
+	filter: drop-shadow(0 0 1px white);
+}
+
 /* Hide AddressField stuff */
 .UrlBar-AddressField .permission-popup.is-blocking,
 .UrlBar-AddressField .UrlBar-UrlObfuscationWarning,
@@ -64,6 +90,7 @@
 	d: path("M10 13l3.634-3.634c.504-.504 1.366-.147 1.366.566v6.137c0 .713-.862 1.07-1.366.566l-3.634-3.634z");
 	opacity: .5;
 }
+
 /* Extensions buttons background */
 .ExtensionDropdownIcon, .ExtensionIcon {
 	background-color: var(--colorAccentBg) !important;
@@ -76,23 +103,22 @@
 
 /* Address + Search field icons dimmed */
 .toolbar-insideinput button {
-	opacity: 0.75;
+	opacity: 0.5;
 }
 
 /* Trashcan dimmed */
-.button-toolbar.toggle-trash button {
-	transition: opacity 200ms;
-	opacity: 0.2;
+.toolbar-tabbar.sync-and-trash-container button {
+	opacity: 0.3;
 }
 
 /* Bookmark button fill colour */
-.bookmark-animated-fill {
+.BookmarkButton .bookmark-animated-fill {
 	fill: var(--colorAccentBgFaded) !important;
 }
 
-/* Panels switch buttons */
-#switch > button.panelbtn img {
-	filter: drop-shadow(0 0 1px white);
+/* Bookmark button active opacity */
+.BookmarkButton .button-on {
+	opacity: 1;
 }
 
 /* Bookmarks Panel input width */
@@ -112,18 +138,28 @@
 
 /* Unread tabs bold font */
 .tab-strip .tab.unread {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 /* Tab tooltip hide image */
 #vivaldi-tooltip .tooltip .tooltip-item .thumbnail-image {
-  display: none;
+	display: none;
 }
 
 /* Tab tooltip size */
 #vivaldi-tooltip .tooltip .tab-group .tooltip-item {
-  width: 250px;
-  height: auto;
+	width: 250px;
+	height: auto;
+}
+
+/* Dim empty UrlField text colour */
+.UrlField--IsEmpty {
+	color: var(--colorFgFadedMost);
+}
+
+/* Use Highlight colour for settings selected */
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+	background-color: var(--colorHighlightBgFaded);
 }
 
 /* Hide Extension buttons */
