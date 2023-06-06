@@ -1,0 +1,71 @@
+/* Hide header if tabs not on top */
+#browser:not(.tabs-top) #header {
+	min-height: 0px !important;
+}
+
+/* Hide page title (Start Page for some reason shows this) */
+#browser:not(.tabs-top):not(.minimal-ui):not(.normal) #pagetitle {
+    display: none;
+}
+
+/* Set mainbar/bookmark-bar l/r padding */
+#browser:not(.tabs-top) .toolbar-mainbar,
+#browser:not(.tabs-top):not(.address-top):not(.normal) .bookmark-bar {
+	padding-left: 30px;
+	padding-right: 130px;
+}
+
+/* Bottom border of mainbar */
+#browser:not(.tabs-top) .toolbar-mainbar:after {
+	content: '';
+	background-color: var(--colorAccentBgDarker);
+	bottom: 0;
+}
+
+/* Make sure buttons are in front */
+#browser:not(.tabs-top) .vivaldi,
+#browser:not(.tabs-top) .window-buttongroup {
+	z-index: 10;
+}
+
+/* Override V icon size */
+#browser:not(.tabs-top) .vivaldi {
+	width: 34px;
+}
+#browser:not(.tabs-top) .vivaldi svg {
+	height: 22px;
+	width: 22px;
+}
+
+/* Hide buttons when all UI hidden */
+#browser.address-top-off.bookmark-bar-top-off:not(.tabs-top) .vivaldi,
+#browser.address-top-off.bookmark-bar-top-off:not(.tabs-top) .window-buttongroup,
+#browser.address-bottom-off.bookmark-bar-top-off:not(.tabs-top) .vivaldi,
+#browser.address-bottom-off.bookmark-bar-top-off:not(.tabs-top) .window-buttongroup {
+	display: none;
+}
+
+/* Show buttons on windowed/minimal-ui */
+#browser.normal .vivaldi,
+#browser.minimal-ui:not(.fullscreen) .vivaldi,
+#browser.normal .window-buttongroup,
+#browser.minimal-ui .window-buttongroup {
+	display: initial !important;
+}
+
+/* Reset header on windowed/minimal-ui/bottom-UrlBar/horizontal-menu */
+#browser.normal #header,
+#browser.minimal-ui:not(.fullscreen) #header,
+#browser.address-bottom #header,
+#browser.horizontal-menu #header {
+	min-height: calc(25px / var(--uiZoomLevel)) !important;
+}
+
+/* Reset header on windowed/minimal-ui/bottom-UrlBar/horizontal-menu */
+#browser.normal .toolbar-mainbar,
+#browser.minimal-ui .toolbar-mainbar,
+#browser.address-bottom .toolbar-mainbar,
+#browser.horizontal-menu .toolbar-mainbar {
+	padding-left: unset;
+	padding-right: unset;
+}
