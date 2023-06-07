@@ -22,7 +22,7 @@
 	opacity: 0.8;
 }
 
-/* Find-in-page background color for no matches */
+/* Find-in-page background colour for no matches */
 .find-in-page.fip-nomatches { 
 	background: darkred;
 }
@@ -32,7 +32,12 @@
 	opacity: 1 !important;	
 }
 
-/* Find-in-page no animation */
+/* Find-in-page hit no animation */
 .fip-active-hit {
 	display: none;
+}
+
+/* Find-in-page hit no page dimming */
+.find-in-page-wrapper:has(.find-in-page) + .row-wrapper .webpage>webview { 
+	filter: unset !important;
 }
