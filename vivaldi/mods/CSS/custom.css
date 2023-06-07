@@ -19,10 +19,10 @@
 
 /* Skinnier statusbar */
 #browser footer .toolbar-statusbar {
-	height: 20px;
+	height: 22px;
 }
 #browser footer .toolbar-statusbar button {
-	height: 20px;
+	height: 22px;
 	width: 100%;
 }
 #browser footer .toolbar-statusbar .override.button-icon {
