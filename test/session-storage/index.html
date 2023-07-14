@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test of HTML5 localStorage and sessionStorage persistence</title>
+</head>
+
+<body>
+	<h2>Test of HTML5 localStorage and sessionStorage persistence</h2>
+
+	<p>Enter data in either box and click the button to store it. If you navigate to this page in a new window or tab, or quit and relaunch your browser, localStorage will remain and sessionStorage will disappear.</p>
+	<p>Then click the button to open a popup window.</p>
+
+	<p>
+	Local storage:<br />
+	<input type="text" placeholder="nothing currently stored" size="30" id="local" />
+	<input type="button" onclick="store_it('local', window.localStorage);" value="Store it" />
+	</p>
+
+	<p>
+	Session storage:<br />
+	<input type="text" placeholder="nothing currently stored" size="30" id="session" />
+	<input type="button" onclick="store_it('session', window.sessionStorage);" value="Store it" />
+	</p>
+
+	<p id="local-warning"></p>
+	<p id="session-warning"></p>
+
+<script type="text/javascript" src="storage-test.js"></script>
+
+<button onclick="myFunction()">Open Popup</button>
+
+<script>
+function myFunction() {
+  window.open("index.html", "_blank", "width=600, height=500");
+}
+</script>
+
+</body>
+</html>
