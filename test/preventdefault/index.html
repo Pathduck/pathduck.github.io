@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vivaldi Fast Forward vs. preventDefault()</title>
+</head>
+<body>
+	<p>You cannot use Space inside the input:</p>
+	<p><input autofocus></p>
+	<p>Press ESC to escape the input and press Space.</code></p>
+	<p>The link should not be followed if Space is blocked by <code>event.preventDefault()</code> - or should it?</p>
+	<p><a href="https://example.com/" rel="next">Next</a></p>
+		
+<script>	
+window.onkeydown = function (event) {
+    if (event.keyCode === 32) {
+			event.preventDefault();
+			//event.stopImmediatePropagation();
+			//event.stopPropagation();
+    }
+};
+</script>	
+
+</body>
+</html>
