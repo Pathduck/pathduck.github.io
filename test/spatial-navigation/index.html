@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spatial Navigation Test Cases</title>
+</head>
+<body>
+  <h1>Spatial Navigation Test Cases</h1>
+  <p>Press shift+down (or another shortcut associated with spatnav) repeatedly to navigate through the elements.</p>
+  <p>Expected result: Both links, form fields and other interactive elements are traversable by spatnav.<br>
+  Elements that can consume shift+arrows themselves (e.g. a multiline textarea) should only be prefocused, not focused,
+  so you can navigate past them without interruption and without changing any values.</p>
+  <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Link</a></p>
+  <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Link</a></p>
+  <p><button>Button</button></p>
+  <p><input type="text">Input type=text</p>
+  <p><input type="tel">Input type=tel</p>
+  <p><input type="url">Input type=url</p>
+  <p><input type="email">Input type=email</p>
+  <p><input type="password">Input type=password</p>
+  <p><input type="date">Input type=date</p>
+  <p><input type="time">Input type=time</p>
+  <p><input type="number">Input type=number</p>
+  <p><input type="range">Input type=range</p>
+  <p><input type="color">Input type=color</p>
+  <p><input type="checkbox">Input type=checkbox</p>
+  <p>Input type=radio:</p>
+  <div>
+    <input type="radio" id="radio1" name="radio" value="radio1" checked>Radio button 1
+  </div>
+  <div>
+    <input type="radio" id="radio2" name="radio" value="radio2">Radio button 2
+  </div>
+  <div>
+    <input type="radio" id="radio3" name="radio" value="radio3">Radio button 3
+  </div>
+  <p><input type="file">Input type=file</p>
+  <p><input type="button">Input type=button</p><select>
+    <option value="volvo">
+      Select:
+    </option>
+    <option value="saab">
+      Saab
+    </option>
+    <option value="mercedes">
+      Mercedes
+    </option>
+    <option value="audi">
+      Audi
+    </option>
+  </select>
+  <p>An iframe including focusable elements:<br>
+  <iframe src="https://vivaldi.com/bugreport.html"></iframe></p>
+  <div style="height: 100px; width: 300px; outline: 1px dotted green; overflow: scroll">
+    <p>A scrollable div.</p>
+    <p>This div contains links.</p>
+    <p>.....</p>
+    <p>.....</p>
+    <p>.....</p>
+    <p>.....</p>
+    <p>.....</p>
+    <p><a href="#">Also links below the fold that should be scrolled into view with Spatnav.</a></p>
+  </div>
+  <p>
+  <textarea>Textarea</textarea></p>
+  <p><span onclick="alert('You clicked me!')">Span with onclick listener. Try to click me by keyboard!</span></p>
+  <p><span onclick="alert('You clicked me!')"><span tabindex="0">Span with tabindex=0.</span></span></p>
+  <p><span onclick="alert('You clicked me!')"><video controls=""><span onclick="alert('You clicked me!')"><source src=
+  "http://dl5.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm"></span>
+  <div draggable="" ondragstart="()" style="width: 500px; height: 100px; outline: 1px dotted green; cursor: move">
+    <span onclick="alert('You clicked me!')">This is a div with the draggable attribute and the ondragstart event
+    listener set (though it doesn't do anything). Only useful if drag-and-drop will be made keyboard accessible in
+    general (VB-4154). Also consider adding dragenter or dragover listeners to the list of spatnav triggers.</span>
+  </div>
+  <div dropzone="copy" ondrop="()" style="width: 500px; height: 100px; outline: 1px dotted green; cursor: copy">
+    <span onclick="alert('You clicked me!')">This is a drop target for drag-and-drop, declared by the dropzone
+    attribute and the ondrop event listener (though it doesn't do anything). Only useful if drag-and-drop will be made
+    keyboard accessible in general (VB-4154).</span>
+  </div>
+  <p><span onclick="alert('You clicked me!')"><span style="cursor: pointer">This is a span with a pointer cursor. It
+  usually indicates something clickable for mouse users and can be reasonably expected to be interactive. Not included
+  as a spatnav target in old Opera, but I think it does no harm and may fix a few additional cases where web apps
+  aren't specifically developed with keyboard accessibility in mind.</span></span></p>
+  <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Link</a></p></video></span></p>
+</body>
+</html>
