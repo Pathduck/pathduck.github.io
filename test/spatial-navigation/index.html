@@ -9,9 +9,25 @@
   <p>Expected result: Both links, form fields and other interactive elements are traversable by spatnav.<br>
   Elements that can consume shift+arrows themselves (e.g. a multiline textarea) should only be prefocused, not focused,
   so you can navigate past them without interruption and without changing any values.</p>
-  <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Link</a></p>
-  <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Link</a></p>
-  <p><button>Button</button></p>
+  <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Regular link</a></p>
+  <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Regular link</a></p>
+  <table>
+    <tr>
+      <td><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Links in Table</a></td>
+      <td><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Links in Table</a></td>
+      <td><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Links in Table</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Links in Table</a></td>
+      <td><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Links in Table</a></td>
+      <td><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Links in Table</a></td>
+    </tr>
+  </table>
+  <div style="width: 100px;">
+    <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Paragraph with a long link text 
+		that most likely will wrap.</a></p>
+  </div>
+  <p><span onclick="alert('You clicked me!')"><button>Button</button></span></p>
   <p><input type="text">Input type=text</p>
   <p><input type="tel">Input type=tel</p>
   <p><input type="url">Input type=url</p>
@@ -49,7 +65,7 @@
     </option>
   </select>
   <p>An iframe including focusable elements:<br>
-  <iframe src="https://vivaldi.com/bugreport.html"></iframe></p>
+  <iframe src="frame.html"></iframe></p>
   <div style="height: 100px; width: 300px; outline: 1px dotted green; overflow: scroll">
     <p>A scrollable div.</p>
     <p>This div contains links.</p>
@@ -61,11 +77,13 @@
     <p><a href="#">Also links below the fold that should be scrolled into view with Spatnav.</a></p>
   </div>
   <p>
-  <textarea>Textarea</textarea></p>
+  <textarea cols="60" rows="5">Textarea</textarea></p>
   <p><span onclick="alert('You clicked me!')">Span with onclick listener. Try to click me by keyboard!</span></p>
   <p><span onclick="alert('You clicked me!')"><span tabindex="0">Span with tabindex=0.</span></span></p>
-  <p><span onclick="alert('You clicked me!')"><video controls=""><span onclick="alert('You clicked me!')"><source src=
-  "http://dl5.webmfiles.org/big-buck-bunny_trailer.webm" type="video/webm"></span>
+  <div>
+    <video loop="" controls="" muted="" width="500"><source src=
+    "https://help.vivaldi.com/wp-content/uploads/2017/12/vivaldi_success.mp4" type="video/mp4"></video>
+  </div>
   <div draggable="" ondragstart="()" style="width: 500px; height: 100px; outline: 1px dotted green; cursor: move">
     <span onclick="alert('You clicked me!')">This is a div with the draggable attribute and the ondragstart event
     listener set (though it doesn't do anything). Only useful if drag-and-drop will be made keyboard accessible in
@@ -80,6 +98,5 @@
   usually indicates something clickable for mouse users and can be reasonably expected to be interactive. Not included
   as a spatnav target in old Opera, but I think it does no harm and may fix a few additional cases where web apps
   aren't specifically developed with keyboard accessibility in mind.</span></span></p>
-  <p><a href="https://en.wikipedia.org/wiki/Spatial_navigation">Link</a></p></video></span></p>
 </body>
 </html>
