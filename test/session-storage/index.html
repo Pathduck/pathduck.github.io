@@ -8,8 +8,8 @@
 	<h2>Test of HTML5 localStorage and sessionStorage persistence</h2>
 
 	<p>Enter data in either box and click the button to store it. If you navigate to this page in a new window or tab, or quit and relaunch your browser, localStorage will remain and sessionStorage will disappear.</p>
-	<p>Reload the page to verify the values are stored.</p>
-	<p>Then click the button to open a popup window.</p>
+	<p>Reload the page to verify the values are stored. Then click the button to open a popup window.</p>
+	<p>Popups and new tabs opened from a <code>window.open</code> event should inherit both storage values</p>
 
 	<p>
 	Local storage:<br />
@@ -28,11 +28,12 @@
 
 <script type="text/javascript" src="storage-test.js"></script>
 
-<button onclick="openPopup()">Open Popup</button>
+<button onclick="window.open('index.html', '_blank', 'width=600, height=500'); return false;">Open Popup</button>
+<button onclick="window.open('index.html'); return false;">Open New Tab</button>
 
 <script>
 function openPopup() {
-  window.open("index.html", "_blank", "width=600, height=500");
+  
 }
 </script>
 
