@@ -26,10 +26,15 @@
 	<p id="local-warning"></p>
 	<p id="session-warning"></p>
 
-<script type="text/javascript" src="storage-test.js"></script>
+	<p>
+	<button onclick="window.open('index.html', '_blank', 'width=600, height=500'); return false;">Open Popup</button>
+	<button onclick="window.open('index.html'); return false;">Open New Tab</button>
+	</p>
+	<p>
+	<button onclick="window.open('index.html', 'popup', 'width=600, height=500'); return false;">Open Named Popup</button>
+	</p>
 
-<button onclick="window.open('index.html', '_blank', 'width=600, height=500'); return false;">Open Popup</button>
-<button onclick="window.open('index.html'); return false;">Open New Tab</button>
+<script type="text/javascript" src="storage-test.js"></script>
 
 <script>
 function openPopup() {
