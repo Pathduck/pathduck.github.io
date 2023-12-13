@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>VB-99904 test</title>
+
+    <script>
+
+    let namedframe = null;
+
+      const start = () => {
+        const sessiondata = "session-data-for-VB-99904";
+
+        sessionStorage.vb99904 = sessiondata;
+
+        document.getElementById("session-warning").innerHTML =
+          "sessionStorage is : '" + sessiondata + "'";
+      };
+
+      const showframeTab = () => {
+        window.open("show_storage.html");
+      };
+
+      const showframePopup = () => {
+        window.open("show_storage.html", "_blank", "width=320, height=200");
+      };
+
+      const showframeNamedPopup = () => {
+       namedframe = window.open("show_storage.html", "vb99904", "width=320, height=200");
+      };
+
+    </script>
+
+    <style>
+      body {
+        background-color: teal;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body onload="start()">
+    <h1>setting session storage and opening frames that should inherit this</h1>
+    <p id="session-warning"></p>
+
+    <button onclick="showframeTab()">tab</button>
+    <button onclick="showframePopup()">popup</button>
+    <button onclick="showframeNamedPopup()">namedpopup</button>
+
+    <button onclick="if (namedframe) namedframe.name='newvb99904'">rename the named frame</button>
+
+    <a href="https://www.vivaldi.com/" target="vb99904"
+      >open Vivaldi com in the named popup, or a tab if no popup</a
+    >
+
+    <a href="https://www.vivaldi.com/" target="newvb99904"
+      >open Vivaldi com in the named popup, or a tab if no popup</a
+    >
+    
+  </body>
+</html>
