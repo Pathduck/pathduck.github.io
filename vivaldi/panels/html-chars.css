@@ -1,20 +1,18 @@
 
-body { color: black; background-color: white; }
-
-td { font-size: 90% ; }
-td { text-align: center  ;}
-td.right { text-align: right ; }
-td.dark { color: #FFFFFF ; }
-
-em { background-color: yellow ;}
-img { border: 0px ; }
-
-caption { display: none; }
-
+body { color: white; background-color: black; }
 h1,body,html { margin-top: none; padding-top: none; }
+
+a { color: skyblue; }
+td { font-size: 90%; text-align: center; }
+td.right { text-align: right; }
+td.dark { color: #FFFFFF; }
+.highlight { background-color: darkred ; }
+
+img { border: 0px; }
+em { background-color: darkred; }
+caption { display: none; }
 
 h1 { font-size: medium; }
 html[xmlns] h1 { font-size: large; }
 
-.highlight { background-color: yellow ;}
 

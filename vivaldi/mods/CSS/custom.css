@@ -4,6 +4,10 @@
 .vivaldi-v, .vivaldi-horizontal-icon {opacity: 1 !important;}
 .vivaldi-v svg, .vivaldi-horizontal-icon svg {background: radial-gradient(white, white 50%, transparent 50%); fill: #383838;} 
 
+/* Remove V button expand arrow */
+#browser:has(.vivaldi-v) {--menuWidth: 26px;}
+.vivaldi .expand-arrow {display: none;}
+
 /* Skinnier mainbar */
 .mainbar>.toolbar-mainbar,
 .mainbar>.toolbar-mainbar .button-toolbar button,
@@ -93,7 +97,7 @@
 
 /* Extensions buttons background */
 .ExtensionDropdownIcon, .ExtensionIcon {
-	background-color: var(--colorAccentBg) !important;
+	background-color: transparent !important;
 }
 
 /* Toolbar buttons keyboard focus */
