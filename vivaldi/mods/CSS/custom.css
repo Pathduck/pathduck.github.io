@@ -61,6 +61,12 @@
 	padding-top: unset;
 }
 
+/* Smaller icon for internal webpanels */
+#switch .button-toolbar-webpanel .button-icon svg {
+	width: 20px;
+	height: 20px;
+}
+
 /* Add drop-shadow to some buttons */
 #switch button img,
 .tab:not(.active) .favicon img,
@@ -161,10 +167,20 @@
 	color: var(--colorFgFadedMost);
 }
 
-/* Use Highlight colour for settings selected */
+/* Input text selection background */
+#browser input:focus::selection,
+#browser textarea:focus::selection,
+#browser [contenteditable]:focus::selection,
+.OmniLinkItem--Highlighted,
 .vivaldi-settings .settings-sidebar .button-category.category-selected {
-	background-color: var(--colorHighlightBgFaded);
+  background-color: var(--colorHighlightBgDark) !important;
 }
+
+/* Pageload Indicator */
+.UrlBar-AddressField .pageload .pageload-indicator {
+  background-color: var(--colorAccentBg) !important;
+}
+
 
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
