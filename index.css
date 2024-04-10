@@ -2,6 +2,7 @@ body {
 	font-family: Consolas, Courier, monospace;
 	color: lime;
 	background-color: black;
+	background-image: url(/img/crt-lines.png);
 }
 
 a img {
