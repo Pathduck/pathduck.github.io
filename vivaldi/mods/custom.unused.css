@@ -51,3 +51,20 @@ body {
 .OmniLinkItem--Highlighted, OmniLinkItem:hover {
     background-color: var(--colorHighlightBg) !important;
 }
+
+/* Floating multiline StatusInfo URL */
+.toolbar .StatusInfo {
+	background: var(--colorBg);
+	border-radius: var(--radius);
+	position: absolute;
+	max-width: 99%;
+	bottom: 25px;
+	left: 5px;
+	padding: 5px 0;
+}
+
+.StatusInfo-Content .UrlFragments {
+	overflow-wrap: anywhere;
+	text-wrap: wrap;
+	overflow: visible;
+}
