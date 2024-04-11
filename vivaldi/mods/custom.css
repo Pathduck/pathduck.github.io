@@ -181,6 +181,5 @@
   background-color: var(--colorAccentBg) !important;
 }
 
-
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}

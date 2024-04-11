@@ -132,13 +132,14 @@
 }
 
 /* Bookmarks Panel input width */
-.addbookmark-cardwrapper {
+/*.addbookmark-cardwrapper {
 	width: 100%;
-}
+}*/
 
-/* Bookmarks Panel thumbnails hide */
-.addbookmark-cardwrapper .preview {
-	display: none !important;
+/* Bookmarks thumbnails hide */
+.panel-bookmarks-edit .cardview .preview,
+.manager-editor .cardview .preview {
+	display: none;
 }
 
 /* Hide Image Properties button */
@@ -180,7 +181,6 @@
 .UrlBar-AddressField .pageload .pageload-indicator {
   background-color: var(--colorAccentBg) !important;
 }
-
 
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
