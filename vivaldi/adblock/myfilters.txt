@@ -14,9 +14,8 @@
 !127.0.0.1^$websocket
 !localhost^$websocket
 
-!! BLOCKS
-||example.com^$document
-||facebook.com^$document
+!! DOMAIN BLOCKS
+!||facebook.com^$document
 
-example.com##h1
-example.com##div:[style="width: 600px;"]
+||example.com##h1
+
