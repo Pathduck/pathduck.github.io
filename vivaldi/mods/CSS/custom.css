@@ -152,8 +152,10 @@
 	font-weight: bold;
 }
 
-/* Tab tooltip hide image */
-#vivaldi-tooltip .tooltip .tooltip-item .thumbnail-image {
+/* Tab tooltip hide size+ruler+thumbnail */
+#vivaldi-tooltip .tooltip-item .thumbnail-text hr,
+#vivaldi-tooltip .tooltip-item .thumbnail-text .size,
+#vivaldi-tooltip .tooltip-item .thumbnail-image {
 	display: none;
 }
 
