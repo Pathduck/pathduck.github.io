@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Test Page</title>
+		<style>
+			body{color: #999;background: #501020;}
+			video#important { filter: brightness(250%) hue-rotate(180deg) !important;  }
+			video#no-important { filter: brightness(250%) hue-rotate(180deg);  }
+		</style>
+	</head>
+	<body>
+		<center>
+			<h3>Video 1 - with <code>!important</code> rule</h3>
+			<video id="important" width="960" height="540" controls muted>
+				<source src="https://help.vivaldi.com/wp-content/uploads/2017/12/vivaldi_success.mp4">
+				Your browser does not support the video tag.
+			</video>
+			<h3>Video 2 - no <code>!important</code> rule</h3>
+			<video id="no-important" width="960" height="540" controls muted>
+				<source src="https://help.vivaldi.com/wp-content/uploads/2017/12/vivaldi_success.mp4">
+				Your browser does not support the video tag.
+			</video>
+		</center>
+	</body>
+</html>
