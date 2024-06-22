@@ -156,7 +156,7 @@
 #vivaldi-tooltip .tooltip-item .thumbnail-text hr,
 #vivaldi-tooltip .tooltip-item .thumbnail-text .size,
 #vivaldi-tooltip .tooltip-item .thumbnail-image {
-	display: none;
+	display: none !important;
 }
 
 /* Tab tooltip size */
