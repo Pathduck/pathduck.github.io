@@ -9,10 +9,10 @@
 .vivaldi .expand-arrow {display: none;}
 
 /* Skinnier mainbar */
-.mainbar>.toolbar-mainbar,
-.mainbar>.toolbar-mainbar .button-toolbar button,
-.mainbar>.toolbar-mainbar .toolbar-extensions,
-.mainbar>.toolbar-mainbar .toolbar-extensions .button-toolbar button {
+.mainbar .toolbar-mainbar,
+.mainbar .toolbar-mainbar .button-toolbar button,
+.mainbar .toolbar-mainbar .toolbar-extensions,
+.mainbar .toolbar-mainbar .toolbar-extensions .button-toolbar button {
 	height: 30px;
 }
 
@@ -23,10 +23,10 @@
 
 /* Skinnier statusbar */
 #browser footer .toolbar-statusbar {
-	height: 22px;
+	height: 20px;
 }
 #browser footer .toolbar-statusbar button {
-	height: 22px;
+	height: 20px;
 	width: 100%;
 }
 #browser footer .toolbar-statusbar .override.button-icon {
@@ -46,7 +46,8 @@
 
 /* SiteInfo secure background colour */
 .SiteInfoButton.secure, .SiteInfoButton.certified {
-	background-color: #004400;
+	background-color: #004400 !important;
+	opacity: unset;
 	height: 22px;
 	width: 22px;
 }
@@ -154,7 +155,6 @@
 
 /* Tab tooltip hide size+ruler+thumbnail */
 #vivaldi-tooltip .tooltip-item .thumbnail-text hr,
-#vivaldi-tooltip .tooltip-item .thumbnail-text .size,
 #vivaldi-tooltip .tooltip-item .thumbnail-image {
 	display: none !important;
 }

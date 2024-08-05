@@ -11,7 +11,7 @@
 /* Set mainbar/bookmark-bar l/r padding */
 #browser:not(.tabs-top) .toolbar-mainbar,
 #browser:not(.tabs-top):not(.address-top):not(.normal) .bookmark-bar {
-	padding-left: 30px;
+	padding-left: 26px;
 	padding-right: 130px;
 }
 
@@ -22,16 +22,21 @@
 	bottom: 0;
 }
 
-/* Make sure buttons are in front */
-#browser:not(.tabs-top) .vivaldi,
-#browser:not(.tabs-top) .window-buttongroup {
-	z-index: 10;
+/* Window buttons size + zindex */
+#browser:not(.tabs-top) .window-buttongroup,
+#browser .window-buttongroup button {
+    height: 30px !important;
+    z-index: 10 !important;
 }
 
-/* Override V icon size */
-#browser:not(.tabs-top) .vivaldi {
-	width: 34px;
+/* V icon size + zindex */
+#browser:not(.tabs-top) #titlebar .vivaldi {
+	width: 26px;
+	height: 30px;
+	scale: unset;
+	z-index: 10;
 }
+/* V icon SVG size */
 #browser:not(.tabs-top) .vivaldi svg {
 	height: 22px;
 	width: 22px;
