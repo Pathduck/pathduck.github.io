@@ -23,10 +23,10 @@
 
 /* Skinnier statusbar */
 #browser footer .toolbar-statusbar {
-	height: 22px;
+	height: 20px;
 }
 #browser footer .toolbar-statusbar button {
-	height: 22px;
+	height: 20px;
 	width: 100%;
 }
 #browser footer .toolbar-statusbar .override.button-icon {
@@ -152,9 +152,11 @@
 	font-weight: bold;
 }
 
-/* Tab tooltip hide image */
-#vivaldi-tooltip .tooltip .tooltip-item .thumbnail-image {
-	display: none;
+/* Tab tooltip hide size+ruler+thumbnail */
+#vivaldi-tooltip .tooltip-item .thumbnail-text hr,
+#vivaldi-tooltip .tooltip-item .thumbnail-text .size,
+#vivaldi-tooltip .tooltip-item .thumbnail-image {
+	display: none !important;
 }
 
 /* Tab tooltip size */
