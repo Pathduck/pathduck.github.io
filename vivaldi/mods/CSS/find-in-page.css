@@ -5,10 +5,10 @@
 	border-radius: var(--radius);
 	max-width: fit-content;
 	margin: 0 auto;
-	top: 3px;
-	right: 0;
-	left: 0;
 	z-index:1;
+	top: 3px;
+	left: 0;
+	right: 0;
 }
 
 /* Find-in-page input wider */
