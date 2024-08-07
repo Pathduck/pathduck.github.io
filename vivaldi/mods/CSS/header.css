@@ -15,18 +15,25 @@
 	padding-right: 130px;
 }
 
-/* Bottom border of mainbar */
-#browser:not(.tabs-top) .toolbar-mainbar:after {
-	content: '';
-	background-color: var(--colorAccentBgDarker);
-	bottom: 0;
+/* Remove tabbar/icon padding/margin when windowed */
+#browser.normal .vivaldi,
+#browser.normal #tabs-tabbar-container {
+	padding: 0;
+	margin: 0;
 }
 
 /* Window buttons size + zindex */
-#browser:not(.tabs-top) .window-buttongroup,
-#browser .window-buttongroup button {
-    height: 30px !important;
+#browser.maximized .window-buttongroup,
+#browser.maximized .window-buttongroup button,
+#browser.normal.tabs-top .window-buttongroup button {
+	height: 30px !important;
     z-index: 10 !important;
+}
+
+/* Window buttons size when windowed */
+#browser.normal:not(.tabs-top) #titlebar .vivaldi,
+#browser.normal:not(.tabs-top) .window-buttongroup button {
+	height: 25px !important;
 }
 
 /* V icon size + zindex */
