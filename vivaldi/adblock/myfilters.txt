@@ -1,5 +1,5 @@
 ! Title: Adblock Filters (personal)
-!! EXCEPTIONS
+! EXCEPTIONS
 @@||log.medietall.no^$domain=nrk.no
 @@||apibay.org^$domain=thepiratebay.org
 @@||exdynsrv.com^$domain=thepiratebay.org
@@ -14,8 +14,12 @@
 !127.0.0.1^$websocket
 !localhost^$websocket
 
-!! DOMAIN BLOCKS
+! DOMAIN BLOCKS
 !||facebook.com^$document
 
 ||example.com##h1
 
+||washingtonpost.com^$1p,script
+||nytimes.com^$3p,script
+nytimes.com * 3p-script block
+washingtonpost.com * 1p-script block
