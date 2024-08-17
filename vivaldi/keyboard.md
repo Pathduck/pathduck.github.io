@@ -9,7 +9,7 @@
   <tr><td>New Window</td><td>Ctrl+N</td></tr>
   <tr><td>New Private Window</td><td>Ctrl+Shift+N</td></tr>
   <tr><td>Close Window</td><td>Ctrl+Shift+Q</td></tr>
-  <tr><td>Quick Commands</td><td>F2</td></tr>
+  <tr><td>Quick Commands</td><td>Ctrl+E<br>F2</td></tr>
   <tr><td>Task Manager</td><td>Shift+Esc</td></tr>
   <tr><td>Settings</td><td>Alt+F2<br>Ctrl+F12</td></tr>
   <tr><td>Extensions</td><td>Ctrl+Shift+E</td></tr>

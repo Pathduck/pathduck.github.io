@@ -5,7 +5,7 @@
 // @shortcutKeys  [Ctrl + `] Activate Absolute Right Click Mode To Force Remove Any Type Of Protection
 // @author        Absolute
 // @version       1.8.9
-// @include       *://*
+// @match         *://*/*
 // @icon          https://i.imgur.com/AC7SyUr.png
 // @compatible    Chrome Google Chrome + Tampermonkey
 // @grant         GM_registerMenuCommand
@@ -64,7 +64,7 @@
     }
 
     function keyPress(event) {
-        if (event.ctrlKey && event.keyCode == 220) {
+        if (event.ctrlKey && event.keyCode == 190) {
             return confirm('Activate Absolute Right Click Mode!') == true ? absoluteMode() : null;
         }
     }

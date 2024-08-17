@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube fast fullscreen toggle
 // @namespace    http://tampermonkey.net/
-// @version      2.7.0
+// @version      2.10.0
 // @description  Avoids the ~3 second lag when entering/exiting fullscreen on a YouTube video - by hiding the heavy fluff while transitioning
 // @author       Brendan Weibrecht
 // @match        https://www.youtube.com/*
@@ -16,7 +16,18 @@
 
     const isWatchVideoPage = () => window.location.pathname == "/watch"
 
-    const fluff = ['#secondary-inner', '#info', '#meta', '#comments', '#masthead-container', '#speedyg']
+    const fluff = [
+        // Header
+        '#masthead-container',
+
+        // Right column contents
+        '#secondary-inner',
+        '#fixed-secondary',
+
+        // Below video
+        '#below',
+        '#speedyg',
+    ]
 
     const setFluffDisplay = (value) => {
         fluff.forEach(selector => {
@@ -88,10 +99,13 @@
         }, 10)
     }
 
-    const isWritingText = (e) => (
-        e.path[0].tagName == 'INPUT' ||
-        e.path[0].id == 'contenteditable-root'
-    )
+    const isWritingText = (e) => {
+        const path = e.composedPath()
+        return (
+            path[0].tagName == 'INPUT' ||
+            path[0].id == 'contenteditable-root'
+        )
+    }
 
     const delegateEvent = (eventName, elementSelector, handler) => {
         document.addEventListener(eventName, (e) => {
@@ -119,7 +133,7 @@
         })
 
         document.addEventListener("keydown", e => {
-            if (isWatchVideoPage() && e.code == 'KeyF' && !isWritingText(e)) {
+            if (isWatchVideoPage() && !e.ctrlKey && e.code == 'KeyF' && !isWritingText(e)) {
                 console.log(e)
                 fastToggleFullScreen()
             }

@@ -103,8 +103,9 @@
 }
 
 /* Extensions buttons background */
-.ExtensionDropdownIcon, .ExtensionIcon {
-	background-color: transparent !important;
+.ExtensionDropdownIcon, .ExtensionIcon,
+.ExtensionToggleIcon.ExtensionToggleIcon--extensionsExpanded {
+	background-color: transparent !important
 }
 
 /* Toolbar buttons keyboard focus */
