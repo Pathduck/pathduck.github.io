@@ -6,9 +6,14 @@
 <body>
 
 <h3>Test of third-party block.</h3>
-<p>Image below should be blocked as well as script loaded in the header</p>
+<p>Script loaded in header should be blocked.</p>
+<p>Image below should be blocked:</p>
 
 <img src="https://www.abptestpages.org/testfiles/third-party/abb-logo.png">
+
+<p>Embedded PDF in iframe should be blocked:</p>
+<iframe width="50%" height="600px" src="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44678.pdf"></iframe>
+
 
 </body>
 </html>

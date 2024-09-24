@@ -1,5 +1,5 @@
 ! Title: Adblock Filters NEW (personal)
 
 ! Third-party blocks
-*^$third-party,domain=stian.sdf.org
+*^$third-party,script,subdocument,image,domain=pathduck.github.io
 
