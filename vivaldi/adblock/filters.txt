@@ -15,11 +15,17 @@
 !localhost^$websocket
 
 ! DOMAIN BLOCKS
-!||facebook.com^$document
+||facebook.com^$document
 
-||example.com##h1
+example.com##h1
 
 ||washingtonpost.com^$1p,script
 ||nytimes.com^$3p,script
 nytimes.com * 3p-script block
 washingtonpost.com * 1p-script block
+
+@@||majorgeeks.com^$elemhide
+@@||majorgeeks.com^$generichide
+
+! Test of 3p blocking
+*^$third-party,script,subdocument,domain=dictionary.com
