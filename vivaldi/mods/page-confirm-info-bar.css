@@ -20,7 +20,5 @@
 }
 
 .page-confirm-info-bar .infobar-controls svg {
-    width: 10px;
-    height: 10px;
     fill: var(--colorFgFadedMost);
 }
