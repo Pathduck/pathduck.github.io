@@ -13,13 +13,14 @@
     position: relative;
 }
 
-.infobar-controls input[type='button'] {
+.page-confirm-info-bar .infobar-controls input[type='button'] {
     height: 20px;
     color: white;
     background: darkred;
 }
 
-.infobar-close svg {
-    height: 20px !important;
-    fill: var(--colorFgFadedMost) !important;
+.page-confirm-info-bar .infobar-controls svg {
+    width: 10px;
+    height: 10px;
+    fill: var(--colorFgFadedMost);
 }
