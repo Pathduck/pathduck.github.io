@@ -28,13 +28,13 @@
 /* Speed Dials thumbnail */
 .speeddial .dial .thumbnail-image {
 	display: block;
-	padding: 1em;
 }
 
 /* Speed Dials thumbnail fit container */
 .speeddial .dial .thumbnail-image img {
 	object-fit: contain;
 	object-position: center;
+	padding: 1em;
 }
 
 /* Speed Dial background image fit */
