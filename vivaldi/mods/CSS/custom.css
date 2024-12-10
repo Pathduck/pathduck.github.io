@@ -21,6 +21,11 @@
 	height: 100%;
 }
 
+/* Unset statusbar top border */ 
+#browser footer#footer {
+	border-top: unset !important;
+}
+
 /* Skinnier statusbar */
 #browser footer .toolbar-statusbar {
 	height: 20px;
@@ -154,9 +159,8 @@
 	font-weight: bold;
 }
 
-/* Tab tooltip hide size+ruler+thumbnail */
-#vivaldi-tooltip .tooltip-item .thumbnail-text hr,
-#vivaldi-tooltip .tooltip-item .thumbnail-image {
+/* Tab tooltip hide thumbnail */
+#vivaldi-tooltip .tooltip .thumbnail-image {
 	display: none !important;
 }
 
@@ -183,6 +187,11 @@
 /* Pageload Indicator */
 .UrlBar-AddressField .pageload .pageload-indicator {
   background-color: var(--colorAccentBg) !important;
+}
+
+/* Hide overlay info bubble */
+.overlayinfobubble {
+	display: none;
 }
 
 /* Hide Extension buttons */
