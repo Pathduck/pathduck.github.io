@@ -21,6 +21,11 @@
 	height: 100%;
 }
 
+/* Unset statusbar top border */ 
+#browser footer#footer {
+	border-top: unset !important;
+}
+
 /* Skinnier statusbar */
 #browser footer .toolbar-statusbar {
 	height: 20px;
@@ -31,6 +36,13 @@
 }
 #browser footer .toolbar-statusbar .override.button-icon {
 	height: 100%;
+}
+
+/* SiteInfoButton */
+.SiteInfoButton {
+	opacity: unset !important;
+	height: 22px;
+	width: 22px;
 }
 
 /* SiteInfo V logo */
@@ -47,9 +59,6 @@
 /* SiteInfo secure background colour */
 .SiteInfoButton.secure, .SiteInfoButton.certified {
 	background-color: #004400 !important;
-	opacity: unset;
-	height: 22px;
-	width: 22px;
 }
 
 /* SiteInfo hide EV/Not Secure text */
@@ -97,9 +106,9 @@
 }
 
 /* Extensions toggle button */
-.toolbar-extensions button svg path {
+.toolbar-extensions .ExtensionToggleIcon button svg path {
 	d: path("M10 13l3.634-3.634c.504-.504 1.366-.147 1.366.566v6.137c0 .713-.862 1.07-1.366.566l-3.634-3.634z");
-	opacity: .5;
+	opacity: 0.5;
 }
 
 /* Extensions buttons background */
@@ -113,8 +122,9 @@
 	background-color: var(--colorAccentBgDark) !important;
 }
 
-/* Address + Search field icons dimmed */
-.toolbar-insideinput button {
+/* Address + Search field buttons dimmed */
+.UrlBar-AddressField .toolbar-insideinput button,
+.UrlBar-SearchField .toolbar-insideinput button {
 	opacity: 0.5;
 }
 
@@ -130,7 +140,7 @@
 
 /* Bookmark button active opacity */
 .BookmarkButton .button-on {
-	opacity: 1;
+	opacity: unset !important;
 }
 
 /* Bookmarks Panel input width */
@@ -154,9 +164,8 @@
 	font-weight: bold;
 }
 
-/* Tab tooltip hide size+ruler+thumbnail */
-#vivaldi-tooltip .tooltip-item .thumbnail-text hr,
-#vivaldi-tooltip .tooltip-item .thumbnail-image {
+/* Tab tooltip hide thumbnail */
+#vivaldi-tooltip .tooltip .thumbnail-image {
 	display: none !important;
 }
 
@@ -185,5 +194,15 @@
   background-color: var(--colorAccentBg) !important;
 }
 
+/* Hide overlay info bubble */
+.overlayinfobubble {
+	display: none;
+}
+
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
+
+/* Fix for stupid modal QC dialog */
+/*.modal-faded-background {
+	display: none;
+}*/
