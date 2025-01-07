@@ -4,22 +4,13 @@
     background: var(--colorBg);
 }
 
-.webpageview:has(.page-confirm-info-bar) .webpage,
-.webpageview.internal:has(.page-confirm-info-bar) .internal-page {
-    top: 25px;
-}
-
-.webpageview:has(.page-confirm-info-bar) .find-in-page-wrapper {
-    top: 25px;
-    position: relative;
-}
-
-.page-confirm-info-bar .infobar-controls input[type='button'] {
-    height: 20px;
+.page-confirm-info-bar .infobar-controls input {
+	height: 20px;
     color: white;
     background: darkred;
 }
 
-.page-confirm-info-bar .infobar-controls svg {
-    fill: var(--colorFgFadedMost);
+.page-confirm-info-bar .infobar-controls input:hover {
+    color: var(--colorHighlightFg);
+    background: var(--colorHighlightBg) !important;
 }
