@@ -1,69 +1,41 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Themecolors Test Page</title>
-<style>
-div {text-shadow: white 1px 1px; font-weight: bolder; padding: 10px; border-radius: var(--radius);}
-</style>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="Author" content="Made by 'tree'">
+ <meta name="GENERATOR" content="$Version: $ tree v1.7.0 (c) 1996 - 2014 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+ <title>themecolors</title>
+ <style type="text/css">
+  <!-- 
+  BODY { color: lime; background: black; font-family : ariel, monospace, sans-serif; }
+  P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: lime; background-color: transparent;}
+  B { font-weight: normal; color: lime; background-color: transparent;}
+  A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  .VERSION { font-size: small; font-family : arial, sans-serif; }
+  .NORM  { color: lime;  background-color: transparent;}
+  .FIFO  { color: mediumpurple; background-color: transparent;}
+  .CHAR  { color: yellow; background-color: transparent;}
+  .DIR   { color: deepskyblue;   background-color: transparent;}
+  .BLOCK { color: yellow; background-color: transparent;}
+  .LINK  { color: aqua;   background-color: transparent;}
+  .SOCK  { color: fuchsia;background-color: transparent;}
+  .EXEC  { color: limegreen;  background-color: transparent;}
+  -->
+ </style>
 </head>
 <body>
-<div style="background: var(--colorFg)">colorFg</div>
-<div style="background: var(--colorHighlightBg)">colorHighlightBg</div>
-<div style="background: var(--colorBg)">colorBg</div>
-<div style="background: var(--colorAccentBg)">colorAccentBg</div>
-<div style="background: var(--colorTabBar)">colorTabBar</div>
-<div style="background: var(--colorFgAlpha)">colorFgAlpha</div>
-<div style="background: var(--colorFgIntense)">colorFgIntense</div>
-<div style="background: var(--colorFgFaded))">colorFgFaded</div>
-<div style="background: var(--colorFgFadedMore)">colorFgFadedMore</div>
-<div style="background: var(--colorFgFadedMost)">colorFgFadedMost</div>
-<div style="background: var(--colorBgAlpha)">colorBgAlpha</div>
-<div style="background: var(--colorBgAlphaHeavy)">colorBgAlphaHeavy</div>
-<div style="background: var(--colorBgAlphaHeavier)">colorBgAlphaHeavier</div>
-<div style="background: var(--colorBgAlphaBlur)">colorBgAlphaBlur</div>
-<div style="background: var(--colorBgDark)">colorBgDark</div>
-<div style="background: var(--colorBgDarker)">colorBgDarker</div>
-<div style="background: var(--colorBgLight)">colorBgLight</div>
-<div style="background: var(--colorBgLighter)">colorBgLighter</div>
-<div style="background: var(--colorBgLightIntense)">colorBgLightIntense</div>
-<div style="background: var(--colorBgIntense)">colorBgIntense</div>
-<div style="background: var(--colorBgIntenser)">colorBgIntenser</div>
-<div style="background: var(--colorBgIntserAlpha)">colorBgIntserAlpha</div>
-<div style="background: var(--colorBgInverse)">colorBgInverse</div>
-<div style="background: var(--colorBgInverser)">colorBgInverser</div>
-<div style="background: var(--colorBgFaded)">colorBgFaded</div>
-<div style="background: var(--colorHighlightBgFaded)">colorHighlightBgFaded</div>
-<div style="background: var(--colorHighlightBgAlpha)">colorHighlightBgAlpha</div>
-<div style="background: var(--colorHighlightBgDark)">colorHighlightBgDark</div>
-<div style="background: var(--colorHighlightFg)">colorHighlightFg</div>
-<div style="background: var(--colorHighlightFgAlpha)">colorHighlightFgAlpha</div>
-<div style="background: var(--colorHighlightFgAlphaHeavy)">colorHighlightFgAlphaHeavy</div>
-<div style="background: var(--colorAccentBgAlpha)">colorAccentBgAlpha</div>
-<div style="background: var(--colorAccentBgAlphaHeavy)">colorAccentBgAlphaHeavy</div>
-<div style="background: var(--colorAccentBgDark)">colorAccentBgDark</div>
-<div style="background: var(--colorAccentBgDarker)">colorAccentBgDarker</div>
-<div style="background: var(--colorAccentBgFaded)">colorAccentBgFaded</div>
-<div style="background: var(--colorAccentBgFadedMore)">colorAccentBgFadedMore</div>
-<div style="background: var(--colorAccentBgFadedMost)">colorAccentBgFadedMost</div>
-<div style="background: var(--colorAccentBorder)">colorAccentBorder</div>
-<div style="background: var(--colorAccentBorderDark)">colorAccentBorderDark</div>
-<div style="background: var(--colorAccentFg)">colorAccentFg</div>
-<div style="background: var(--colorAccentFgFaded)">colorAccentFgFaded</div>
-<div style="background: var(--colorAccentFgAlpha)">colorAccentFgAlpha</div>
-<div style="background: var(--colorAccentFgAlphaHeavy)">colorAccentFgAlphaHeavy</div>
-<div style="background: var(--colorBorder)">colorBorder</div>
-<div style="background: var(--colorBorderDisabled)">colorBorderDisabled</div>
-<div style="background: var(--colorBorderSubtle)">colorBorderSubtle</div>
-<div style="background: var(--colorBorderIntense)">colorBorderIntense</div>
-<div style="background: var(--colorSuccessBg)">colorSuccessBg</div>
-<div style="background: var(--colorSuccessBgAlpha)">colorSuccessBgAlpha</div>
-<div style="background: var(--colorSuccessFg)">colorSuccessFg</div>
-<div style="background: var(--colorWarningBg)">colorWarningBg</div>
-<div style="background: var(--colorWarningBgAlpha)">colorWarningBgAlpha</div>
-<div style="background: var(--colorWarningFg)">colorWarningFg</div>
-<div style="background: var(--colorErrorBg)">colorErrorBg</div>
-<div style="background: var(--colorErrorBgAlpha)">colorErrorBgAlpha</div>
-<div style="background: var(--colorErrorFg)">colorErrorFg</div>
-<div style="background: var(--colorWindowBg)">colorWindowBg</div>
-<div style="background: var(--colorWindowFg)">colorWindowFg</div>
-</body>
+	<h1>themecolors</h1><p>
+	<a class="NORM" href="..">..</a><br>
+[4.3K&nbsp;Jan&nbsp;15&nbsp;11:38]&nbsp;&nbsp;<a class="EXEC" href="./color-variable-all.html">color-variable-all.html</a><br>
+[1.0K&nbsp;Jan&nbsp;15&nbsp;12:39]&nbsp;&nbsp;<a class="EXEC" href="./color-variable-test.html">color-variable-test.html</a><br>
+	<br><br>
+	</p>
+	<p>
+
+0 directories, 2 files
+	<br><br>
+	</p>
 </html>
