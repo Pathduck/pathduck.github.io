@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Theme inheritance test</title>
+<meta name="content-type" content="text/html; charset=UTF-8" />
+<style>
+/* inherited theme colors */
+body {
+  color: var(--colorFg);
+  background-color: var(--colorBg);
+  padding: 1rem;
+}
+em {
+  color: var(--colorHighlightFg);
+  background-color: var(--colorHighlightBg);
+  border-radius: var(--radius);
+  padding: 0 0.3rem;
+}
+/* variable calculation */
+strong {
+  --blackOrWhite: rgb(
+    calc(255 * var(--isDarkTheme, 0)),
+    calc(255 * var(--isDarkTheme, 0)),
+    calc(255 * var(--isDarkTheme, 0))
+  );
+  color: var(--blackOrWhite);
+}
+/* container test */
+.visibility-test {
+  container-name: vTest;
+}
+@container vTest style(--isDarkTheme: 0) {
+  .dark { display: none; }
+}
+@container vTest style(--isDarkTheme: 1) {
+  .light { display: none; }
+}
+</style>
+</head>
+
+<body>
+  <p>
+    Testing <em>theme color</em> inheritance.
+  </p>
+  <p class="visibility-test">It is a
+    <strong class="dark">dark</strong>
+    <strong class="light">light</strong>
+    theme.
+  </p>
+</body>
+</html>
