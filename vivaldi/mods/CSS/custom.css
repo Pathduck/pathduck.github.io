@@ -21,11 +21,6 @@
 	height: 100%;
 }
 
-/* Unset statusbar top border */ 
-#browser footer#footer {
-	border-top: unset !important;
-}
-
 /* Skinnier statusbar */
 #browser footer .toolbar-statusbar {
 	height: 20px;
@@ -34,8 +29,13 @@
 	height: 20px;
 	width: 100%;
 }
-#browser footer .toolbar-statusbar .override.button-icon {
+#browser footer .toolbar-statusbar .button-icon.override {
 	height: 100%;
+}
+
+/* Unset statusbar top border */ 
+#browser footer#footer {
+	border-top: unset !important;
 }
 
 /* SiteInfoButton */
