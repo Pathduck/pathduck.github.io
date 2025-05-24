@@ -1,6 +1,6 @@
 /* Speed Dials Mods */
-.SpeedDialView-Head, .SpeedDialView-Head:empty {
-	margin: 1em auto;
+.SpeedDialView, .SpeedDialView:empty {
+	padding: 40px 0 !important;
 }
 
 /* Speed Dials search field position (if shown) */

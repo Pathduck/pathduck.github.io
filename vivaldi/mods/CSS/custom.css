@@ -143,8 +143,9 @@
 }
 
 /* Trashcan dimmed */
-.toolbar-tabbar.sync-and-trash-container button {
-	opacity: 0.3;
+#tabs-container .synced-tabs-button button,
+#tabs-container .toggle-trash button {
+	opacity: 0.5;
 }
 
 /* Bookmark button fill colour */
@@ -211,7 +212,8 @@
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
 
-/* Fix for stupid modal QC dialog */
-/*.modal-faded-background {
-	display: none;
-}*/
+/* TEMP fix for VB-117286 */
+.toolbar-tabbar-before.modifier:empty,
+.toolbar-tabbar-after.modifier:empty {
+	width: unset !important;
+}

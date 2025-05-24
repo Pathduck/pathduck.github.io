@@ -1,34 +1,25 @@
 /* Placement */
 .qc-modal {top: 15vh !important;}
 
-/* Styling  */
-.qc-modal .modal-wrapper {
-	color: var(--colorFgIntense) !important;
-	background-color: var(--colorBgAlphaBlur) !important;
-	backdrop-filter: var(--backgroundBlur);
-	border: 2px solid var(--colorAccentBgAlphaHeavy);
-	border-radius: var(--radius);
-}
-
-/* Width */
-.quick-command-container, .quick-commands > div {width: 60vw !important;}
-.quick-commands > div > div {max-width: 100% !important;}
-
-/* Height */
-.quick-commands > div {height: 60vh !important;}
-.quick-commands {max-height: 100% !important;}
+/* Width + Height */
+.quick-command-container {width: 60vw !important;}
+.quick-commands .VivaldiList {height: 60vh !important;}
 
 /* Transparency */
-.quick-commands, .qc-entry {background-color: var(--colorBgAlphaHeavy) !important;}
+.qc-entry, .quick-commands  {background-color: var(--colorBgAlphaHeavy) !important;}
 
 /* Selected line */
 .quick-command[data-selected] {background-color: var(--colorHighlightBg) !important;}
 
-/* Hide scrollbar */
-/***
-.qc-modal ::-webkit-scrollbar-track,
-.qc-modal ::-webkit-scrollbar-thumb,
-.qc-modal ::-webkit-scrollbar-button {
-	display: none;
+/* Styling  */
+.qc-modal .modal-wrapper {
+	color: var(--colorFgIntense) !important;
+	background-color: var(--colorBgAlphaBlur) !important;
+	backdrop-filter: blur(3px);
+	border: 2px solid var(--colorAccentBgAlphaHeavy);
 }
-***/
+
+/* Quick command URL */
+.quick-command-url {
+    opacity: 1 !important;
+}
