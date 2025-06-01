@@ -9,6 +9,7 @@ header("Cross-Origin-Resource-Policy: same-origin");
 <head>
 	<title>HTML Test Page</title>
 	<link rel="icon" href="https://developer.mozilla.org/favicon.ico"  />
+	<style>body {color: white; background: darkslategray}</style>
 </head>
 <body>
 	Favicon Test Page
