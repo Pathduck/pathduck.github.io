@@ -1,33 +1,27 @@
 <html>
-  <head>
-    <title>VB-99904 test result</title>
+<head>
+	<title>VB-99904 test result</title>
+	<style>body {color: white; background: darkslategray;} a {color: deepskyblue;}</style>
+	<script>
+		const sessiondata = "session-data-for-VB-99904";
 
-    <script>
-      const sessiondata = "session-data-for-VB-99904";
+		const start = () => {
+			const result = JSON.stringify(sessionStorage);
+			document.getElementById("results").innerHTML =
+				"sessionStorage : " + result;
+		};
+	</script>
+	<style>
+		.storage-results {color: lime; background-color: black;}
+	</style>
+</head>
 
-      const start = () => {
-        const result = JSON.stringify(sessionStorage);
-        document.getElementById("results").innerHTML =
-          "sessionStorage : " + result;
-      };
-    </script>
+<body onload="start()">
+	<h2>sessionstorage results:</h2>
 
-    <style>
-      body {
-        background-color: teal;
-      }
-      .storage-results {
-        background-color: black;
-        color: green;
-      }
-    </style>
-  </head>
+	<div class="storage-results" id="results"></div>
 
-  <body onload="start()">
-    <h2>sessionstorage results:</h2>
+	<div>Should be 'session-data-for-VB-99904'</div>
+</body>
 
-    <div class="storage-results" id="results"></div>
-
-    <div>Should be 'session-data-for-VB-99904'</div>
-  </body>
 </html>
