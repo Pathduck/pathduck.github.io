@@ -158,11 +158,6 @@
 	opacity: unset !important;
 }
 
-/* Bookmarks Panel input width */
-/*.addbookmark-cardwrapper {
-	width: 100%;
-}*/
-
 /* Bookmarks thumbnails hide */
 .panel-bookmarks-edit .cardview .preview,
 .manager-editor .cardview .preview {
@@ -211,9 +206,3 @@
 
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
-
-/* TEMP fix for VB-117286 */
-.toolbar-tabbar-before.modifier:empty,
-.toolbar-tabbar-after.modifier:empty {
-	width: unset !important;
-}

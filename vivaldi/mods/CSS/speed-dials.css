@@ -31,14 +31,3 @@
 	object-position: center;
 	padding: 1em;
 }
-
-/* Settings button focus outline */
-/*.SpeedDialView-Settings-Button:focus {
-	outline: 2px solid var(--colorHighlightBg);
-}*/
-
-/* Speed Dial background image fit */
-/*.startpage {
-	background-size: 100% 100% !important;
-	transition: none !important;
-}*/

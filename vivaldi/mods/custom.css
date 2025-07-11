@@ -21,11 +21,6 @@
 	height: 100%;
 }
 
-/* Unset statusbar top border */ 
-#browser footer#footer {
-	border-top: unset !important;
-}
-
 /* Skinnier statusbar */
 #browser footer .toolbar-statusbar {
 	height: 20px;
@@ -34,8 +29,13 @@
 	height: 20px;
 	width: 100%;
 }
-#browser footer .toolbar-statusbar .override.button-icon {
+#browser footer .toolbar-statusbar .button-icon.override {
 	height: 100%;
+}
+
+/* Unset statusbar top border */ 
+#browser footer#footer {
+	border-top: unset !important;
 }
 
 /* SiteInfoButton */
@@ -87,11 +87,16 @@
 }
 
 /* Hide AddressField stuff */
-.UrlBar-AddressField .permission-popup.is-blocking,
+.UrlBar-AddressField .permission-popup,
 .UrlBar-AddressField .UrlBar-UrlObfuscationWarning,
 .UrlBar-AddressField .ContentBlocker-Control, 
 .UrlBar-AddressField .ToolbarButton-Button[title^="Translate"] {
 	display: none;
+}
+
+/* AddressField show allowed permission buttons */
+.UrlBar-AddressField .permission-popup.is-allowing {
+	display: flex;
 }
 
 /* AddressField URL scheme part */
@@ -104,6 +109,15 @@
 	color: var(--colorFgIntense) !important;
 	font-weight: bold;
 }
+/* AddressField dropdown URL color */
+.OmniLinkItem-DisplayText .displayUrl {
+    color: var(--colorHighlightBgFaded);
+}
+
+/* AddressField pageload indicator */
+.UrlBar-AddressField .pageload .pageload-indicator {
+  background-color: var(--colorAccentBg) !important;
+}
 
 /* Extensions toggle button */
 .toolbar-extensions .ExtensionToggleIcon button svg path {
@@ -113,7 +127,7 @@
 
 /* Extensions buttons background */
 .ExtensionDropdownIcon, .ExtensionIcon,
-.ExtensionToggleIcon.ExtensionToggleIcon--extensionsExpanded {
+.ExtensionToggleIcon.ExtensionToggleIcon--Expanded {
 	background-color: transparent !important
 }
 
@@ -129,8 +143,9 @@
 }
 
 /* Trashcan dimmed */
-.toolbar-tabbar.sync-and-trash-container button {
-	opacity: 0.3;
+#tabs-container .synced-tabs-button button,
+#tabs-container .toggle-trash button {
+	opacity: 0.5;
 }
 
 /* Bookmark button fill colour */
@@ -142,11 +157,6 @@
 .BookmarkButton .button-on {
 	opacity: unset !important;
 }
-
-/* Bookmarks Panel input width */
-/*.addbookmark-cardwrapper {
-	width: 100%;
-}*/
 
 /* Bookmarks thumbnails hide */
 .panel-bookmarks-edit .cardview .preview,
@@ -189,20 +199,10 @@
   background-color: var(--colorHighlightBgDark) !important;
 }
 
-/* Pageload Indicator */
-.UrlBar-AddressField .pageload .pageload-indicator {
-  background-color: var(--colorAccentBg) !important;
-}
-
-/* Hide overlay info bubble */
+/* Hide overlay info bubble + Fullscreen reminder */
 .overlayinfobubble {
 	display: none;
 }
 
 /* Hide Extension buttons */
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
-
-/* Fix for stupid modal QC dialog */
-/*.modal-faded-background {
-	display: none;
-}*/
