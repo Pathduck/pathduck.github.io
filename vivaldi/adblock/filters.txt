@@ -15,8 +15,11 @@
 !localhost^$websocket
 
 ! DOMAIN BLOCKS
+||truthsocial.com^$document
+||rt.com^$document
 ||facebook.com^$document
 
+! ELEMENT HIDING
 example.com##h1
 
 ||washingtonpost.com^$1p,script

@@ -44,8 +44,5 @@
 
 /* Find-in-page hit no page dimming */
 #browser:has(.find-in-page) webview {
-filter: none !important;
+	filter: none !important;
 }
-/*.find-in-page-wrapper:has(.find-in-page) + .row-wrapper .webpage>webview { 
-	filter: unset !important;
-}*/
