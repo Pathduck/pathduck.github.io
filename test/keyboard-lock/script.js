@@ -94,10 +94,15 @@ document.addEventListener("fullscreenchange", () => {
   lock = false;
   if (document.fullscreen) {
     fullscreenButton.textContent = LEAVE_FULLSCREEN;
-    return (div.style.display = "block");
+    document
+      .querySelectorAll("main > div[hidden]:not(.info)")
+      .forEach(div => (div.hidden = false));
+    return;
   }
   fullscreenButton.textContent = ENTER_FULLSCREEN;
-  div.style.display = "none";
+  document
+    .querySelectorAll("main > div[hidden]:not(.info)")
+    .forEach(div => (div.hidden = true));
 });
 
 document.addEventListener("keydown", (e) => {
