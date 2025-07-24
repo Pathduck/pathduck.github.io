@@ -95,13 +95,13 @@ document.addEventListener("fullscreenchange", () => {
   if (document.fullscreen) {
     fullscreenButton.textContent = LEAVE_FULLSCREEN;
     document
-      .querySelectorAll("main > div[hidden]:not(.info)")
+      .querySelectorAll("main > div:not(.info)")
       .forEach(div => (div.hidden = false));
     return;
   }
   fullscreenButton.textContent = ENTER_FULLSCREEN;
   document
-    .querySelectorAll("main > div[hidden]:not(.info)")
+    .querySelectorAll("main > div:not(.info)")
     .forEach(div => (div.hidden = true));
 });
 
