@@ -6,6 +6,7 @@ if (window.self === window.top) {
 
 const fullscreenButton = document.querySelector("#fullscreen");
 const keyboardButton = document.querySelector("#keyboard");
+const pointerButton = document.querySelector("#pointer");
 const body = document.body;
 const div = document.querySelector("div");
 const info = document.querySelector(".info");
@@ -14,10 +15,13 @@ const ENTER_FULLSCREEN = "Enter full screen";
 const LEAVE_FULLSCREEN = "Leave full screen";
 const ACTIVATE_KEYBOARD_LOCK = "Activate keyboard lock";
 const DEACTIVATE_KEYBOARD_LOCK = "Dectivate keyboard lock";
+const ACTIVATE_POINTER_LOCK= "Activate pointer lock";
+const DEACTIVATE_POINTER_LOCK= "Pointer lock activated";
 
 const LOCKED_KEYS = ["MetaLeft", "MetaRight", "Tab", "KeyN", "KeyT", "Escape"];
 
 let lock = false;
+let pointerlock = false;
 
 fullscreenButton.addEventListener("click", async () => {
   if (window.self !== window.top) {
@@ -56,6 +60,34 @@ keyboardButton.addEventListener("click", async () => {
     alert(`${err.name}: ${err.message}`);
   }
 });
+
+// POINTER LOCK
+// Update button text based on current pointer lock state
+function updatePointerButtonText() {
+  const isLocked = document.pointerLockElement === document.body;
+  pointerButton.textContent = isLocked
+    ? DEACTIVATE_POINTER_LOCK
+    : ACTIVATE_POINTER_LOCK;
+}
+
+// Click handler to toggle pointer lock
+pointerButton.addEventListener("click", async () => {
+  try {
+    const isLocked = document.pointerLockElement === document.body;
+
+    if (!isLocked) {
+      await document.body.requestPointerLock();
+    } else {
+      document.exitPointerLock();
+    }
+  } catch (err) {
+    alert(`${err.name}: ${err.message}`);
+  }
+});
+
+// Listen for lock state changes (user presses Esc, tab switches, etc.)
+document.addEventListener("pointerlockchange", updatePointerButtonText);
+
 
 document.addEventListener("fullscreenchange", () => {
   keyboardButton.textContent = ACTIVATE_KEYBOARD_LOCK;
