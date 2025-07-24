@@ -18,11 +18,12 @@ const DEACTIVATE_KEYBOARD_LOCK = "Dectivate keyboard lock";
 const ACTIVATE_POINTER_LOCK= "Activate pointer lock";
 const DEACTIVATE_POINTER_LOCK= "Pointer lock activated";
 
-const LOCKED_KEYS = ["MetaLeft", "MetaRight", "Tab", "KeyN", "KeyT", "Escape"];
+//const LOCKED_KEYS = ["MetaLeft", "MetaRight", "Tab", "KeyN", "KeyT", "Escape"];
 
 let lock = false;
-let pointerlock = false;
 
+// FULLSCREEN
+// Click handler to toggle fullscreen
 fullscreenButton.addEventListener("click", async () => {
   if (window.self !== window.top) {
     window.open(location.href, "", "noopener,noreferrer");
@@ -42,6 +43,8 @@ fullscreenButton.addEventListener("click", async () => {
   }
 });
 
+// KEYBOARD LOCK
+// Click handler to toggle keyboard lock
 keyboardButton.addEventListener("click", async () => {
   try {
     if (!lock) {
@@ -62,14 +65,6 @@ keyboardButton.addEventListener("click", async () => {
 });
 
 // POINTER LOCK
-// Update button text based on current pointer lock state
-function updatePointerButtonText() {
-  const isLocked = document.pointerLockElement === document.body;
-  pointerButton.textContent = isLocked
-    ? DEACTIVATE_POINTER_LOCK
-    : ACTIVATE_POINTER_LOCK;
-}
-
 // Click handler to toggle pointer lock
 pointerButton.addEventListener("click", async () => {
   try {
@@ -85,10 +80,18 @@ pointerButton.addEventListener("click", async () => {
   }
 });
 
+// Update button text based on current pointer lock state
+function updatePointerButtonText() {
+  const isLocked = document.pointerLockElement === document.body;
+  pointerButton.textContent = isLocked
+    ? DEACTIVATE_POINTER_LOCK
+    : ACTIVATE_POINTER_LOCK;
+}
+
 // Listen for lock state changes (user presses Esc, tab switches, etc.)
 document.addEventListener("pointerlockchange", updatePointerButtonText);
 
-
+// Listen for full screen change event
 document.addEventListener("fullscreenchange", () => {
   keyboardButton.textContent = ACTIVATE_KEYBOARD_LOCK;
   lock = false;
@@ -105,13 +108,9 @@ document.addEventListener("fullscreenchange", () => {
     .forEach(div => (div.hidden = true));
 });
 
+// Listen for keydown events
 document.addEventListener("keydown", (e) => {
-  if (
-    lock &&
-    (e.code === "Escape" ||
-      ((e.code === "KeyN" || e.code === "KeyT") &&
-        (event.ctrlKey || event.metaKey)))
-  ) {
+  if (lock) {
     info.style.display = "block";
     setTimeout(() => {
       info.style.display = "none";
