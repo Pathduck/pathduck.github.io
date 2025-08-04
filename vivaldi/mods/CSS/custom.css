@@ -1,8 +1,13 @@
 /* CUSTOM CSS for Vivaldi */
 
 /* Vivaldi logo */
+.vivaldi-v svg, 
+.vivaldi-horizontal-icon svg {
+	background: radial-gradient(white, white 50%, transparent 50%); 
+	fill: #383838;
+} 
 .vivaldi-v, .vivaldi-horizontal-icon {opacity: 1 !important;}
-.vivaldi-v svg, .vivaldi-horizontal-icon svg {background: radial-gradient(white, white 50%, transparent 50%); fill: #383838;} 
+
 
 /* Remove V button expand arrow */
 #browser:has(.vivaldi-v) {--menuWidth: 26px;}
