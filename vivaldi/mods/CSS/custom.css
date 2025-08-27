@@ -94,7 +94,8 @@
 /* Hide AddressField stuff */
 .UrlBar-AddressField .permission-popup,
 .UrlBar-AddressField .UrlBar-UrlObfuscationWarning,
-.UrlBar-AddressField .ContentBlocker-Control, 
+.UrlBar-AddressField .ContentBlocker-Control,
+.UrlBar-AddressField .UrlField--KeywordBadge,
 .UrlBar-AddressField .ToolbarButton-Button[title^="Translate"] {
 	display: none;
 }

@@ -11,11 +11,22 @@ https://forum.vivaldi.net/topic/16684/inspecting-the-vivaldi-ui-with-devtools
 vivaldi.exe --debug-packed-apps --silent-debugger-extension-api
 vivaldi://inspect/#apps/
 
---remote-debugging-port=9222
-http://localhost:9222/
-
 SSL CAPTURE
 vivaldi.exe --ssl-key-log-file="%appdata%\wireshark\ssl-keys.log
+
+DEBUGGING
+https://chromedevtools.github.io/devtools-protocol/
+
+vivaldi --remote-debugging-port=9222
+curl -X put 'http://localhost:9222/json/new?https://example.com'
+curl -X PUT 'http://localhost:9222/json/new?chrome://vivaldi-webui/startpage'
+curl "http://localhost:9222/json/activate/85C9AEF32E9D46B1B94BF1F9EB9241C3"
+
+List WS endpoints:
+curl 'http://127.0.0.1:9222/json'
+
+websocat --jsonrpc --jsonrpc-omit-jsonrpc 'ws://127.0.0.1:9222/devtools/page/0F3F891DF180310443ECDEEC986678F2'
+Page.navigate {"url":"https://example.com"}
 
 DEBUG LOGS
 vivaldi --enable-logging
