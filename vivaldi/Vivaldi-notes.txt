@@ -64,4 +64,4 @@ sqlite3 -json "Web Data" "select short_name, keyword, url, suggest_url, image_ur
 sqlite3 "Web Data" ".dump keywords" > keywords.sql
 
 TRANSLATION TEST
-curl -H 'Content-Type: application/json' -d '{"source":"en","target":"zh-Hans","q":["Customizations & Extensions"]}' "https://mimir.vivaldi.com/translate"
+curl -H 'Content-Type: application/json' -d '{"source":"en","target":"zh-Hans","q":["Customizations & Extensions"]}' "https://mimir2.vivaldi.com/api/translate"
