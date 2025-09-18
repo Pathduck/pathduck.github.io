@@ -19,9 +19,18 @@ Press This Page
 https://stian.sdf.org/wp/wp-admin/press-this.php?url-scan-submit=Scan&u={page_url}
 
 Mail Link
-javascript:document.location.href = 'mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.location);
+javascript:document.location.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(document.location);
 
-Search with ImgOPS
+Share on Vivaldi Social
+https://social.vivaldi.net/share?text={page_title}&url={page_url}
+
+Archive Page
+https://archive.today/submit/?url={page_url}
+
+Search Yandex Images
+https://yandex.com/images/search?rpt=imageview&url={src_url}
+
+Search ImgOPS
 https://imgops.com/{src_url}
 
 Translate selection with DeepL
@@ -29,3 +38,6 @@ https://www.deepl.com/translator#auto/en/{selection}
 
 Translate Page with Google
 https://translate.google.com/website?u={page_url}
+
+Translate Selection with Google
+https://translate.google.com/?sl=auto&tl=auto&text={selection}
