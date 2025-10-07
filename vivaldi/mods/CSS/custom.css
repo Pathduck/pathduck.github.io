@@ -8,7 +8,7 @@
 
 /* Remove V button expand arrow */
 .vivaldi .expand-arrow {display: none;}
-#browser:has(.vivaldi-v), #browser:has(.burger-icon) {--menuWidth: 26px;}
+#browser:has(.vivaldi-v), #browser:has(.burger-icon) {--menuWidth: 25px;}
 
 /* Skinnier mainbar */
 .mainbar .toolbar-mainbar,
@@ -135,7 +135,7 @@
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
 
 /* Toolbar buttons keyboard focus */
-.button-toolbar:focus-within, .button-toolbar:not(.newtab):hover {
+.button-toolbar button:focus-within, .button-toolbar button:hover {
 	background-color: var(--colorAccentBgDark) !important;
 }
 

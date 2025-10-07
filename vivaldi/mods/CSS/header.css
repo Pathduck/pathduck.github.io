@@ -38,8 +38,7 @@
 
 /* V icon size + zindex */
 #browser:not(.tabs-top) #titlebar .vivaldi {
-	width: 26px;
-	height: 30px;
+	width: 25px;
 	scale: unset;
 	z-index: 10;
 }
@@ -61,8 +60,11 @@
 #browser.normal .vivaldi,
 #browser.minimal-ui:not(.fullscreen) .vivaldi,
 #browser.normal .window-buttongroup,
-#browser.minimal-ui .window-buttongroup {
+#browser.normal .window-buttongroup button,
+#browser.minimal-ui .window-buttongroup,
+#browser.minimal-ui .window-buttongroup button {
 	display: initial !important;
+	height: calc(24px / var(--uiZoomLevel)) !important;
 }
 
 /* Reset header on windowed/minimal-ui/bottom-UrlBar/horizontal-menu */
