@@ -1,13 +1,13 @@
 PANELS
 ======
+https://devdocs.io/
+file:///C:/Users/Stian/Documents/Settings/Vivaldi/Panels/HTML/index.html
 file:///C:/Users/Stian/Documents/Settings/Vivaldi/panels/CSS/index.html
-file:///C:/Users/Stian/Documents/Settings/Vivaldi/panels/HTML/index.html
 file:///C:/Users/Stian/Documents/Settings/Vivaldi/panels/HTTP/index.html
 file:///C:/Users/Stian/Documents/Settings/Vivaldi/panels/JS/index.html
 file:///C:/Users/Stian/Documents/Settings/Vivaldi/panels/triplecolors.html
 file:///C:/Users/Stian/Documents/Settings/Vivaldi/panels/html-chars.html
 file:///C:/Users/Stian/Documents/Settings/Vivaldi/panels/Radio/index.html
-https://devdocs.io/
 https://www.w3schools.com/colors/colors_picker.asp
 http://www.dict.org/bin/Dict
 https://emojidb.org/

@@ -6,13 +6,16 @@ INSTALLER COMMAND LINE OPTIONS
 --disable-vivaldi
 
 INSPECT UI
-https://forum.vivaldi.net/topic/16684/inspecting-the-vivaldi-ui-with-devtools
-
-vivaldi.exe --debug-packed-apps --silent-debugger-extension-api
+vivaldi --debug-packed-apps --silent-debugger-extension-api
 vivaldi://inspect/#apps/
 
+https://forum.vivaldi.net/topic/16684/inspecting-the-vivaldi-ui-with-devtools
+
 SSL CAPTURE
-vivaldi.exe --ssl-key-log-file="%appdata%\wireshark\ssl-keys.log
+vivaldi --ssl-key-log-file="%appdata%\wireshark\ssl-keys.log
+
+PROXY
+vivaldi --proxy-server="localhost:8080"
 
 DEBUGGING
 https://chromedevtools.github.io/devtools-protocol/
@@ -59,8 +62,8 @@ FROM urls, visits \
 WHERE urls.id = visits.url;" > history.csv
 
 BACKUP SEARCH ENGINES
-sqlite3 -markdown "Web Data" "select short_name, keyword, url, suggest_url, image_url, search_url_post_params, suggest_url_post_params, image_url_post_params from keywords;" > keywords.md
-sqlite3 -json "Web Data" "select short_name, keyword, url, suggest_url, image_url, search_url_post_params, suggest_url_post_params, image_url_post_params from keywords;" > keywords.json
+sqlite3 "Web Data" -line "select short_name, keyword, url, suggest_url, image_url, search_url_post_params, suggest_url_post_params, image_url_post_params from keywords;" > keywords.txt
+sqlite3 "Web Data" -markdown "select short_name, keyword, url, suggest_url, image_url, search_url_post_params, suggest_url_post_params, image_url_post_params from keywords;" > keywords.md
 sqlite3 "Web Data" ".dump keywords" > keywords.sql
 
 TRANSLATION TEST
