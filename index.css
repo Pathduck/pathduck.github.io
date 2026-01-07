@@ -25,6 +25,7 @@ a:hover, a:active, a:focus {
 
 p {
 	margin-bottom: 50px;
+	text-align: center;
 }
 
 .noshow {
