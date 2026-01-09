@@ -1,24 +1,24 @@
 /* CUSTOM CSS for Vivaldi */
 
 /* Vivaldi logo */
-.vivaldi-v svg, 
-.vivaldi-horizontal-icon svg {
+.vivaldi-v svg {
 	background: radial-gradient(white, white 50%, transparent 50%); 
 	fill: #383838;
 } 
-.vivaldi-v, .vivaldi-horizontal-icon {opacity: 1 !important;}
 
 /* Remove V button expand arrow */
-#browser:has(.vivaldi-v) {--menuWidth: 26px;}
 .vivaldi .expand-arrow {display: none;}
-
-/* Skinnier mainbar */
-.mainbar .toolbar-mainbar,
-.mainbar .toolbar-mainbar .button-toolbar button,
-.mainbar .toolbar-mainbar .toolbar-extensions button {
-	height: 30px;
+#browser:has(.vivaldi-v), #browser:has(.burger-icon) {
+	--menuWidth: 25px !important;
 }
 
+/* Skinnier mainbar */
+.mainbar .toolbar-mainbar.toolbar-addressbar,
+.mainbar .toolbar-mainbar .button-toolbar button {
+	border-radius: var(--radius);
+	min-height: unset !important;
+	height: 30px;
+}
 /* Skinnier mainbar - fix BookmarkButton focus */
 .toolbar-mainbar .UrlBar-AddressField .BookmarkButton button {
 	height: 100%;
@@ -137,7 +137,7 @@
 .button-toolbar.extensionId button[title="Spatial Navigation"] {display: none;}
 
 /* Toolbar buttons keyboard focus */
-.button-toolbar:focus-within, .button-toolbar:hover {
+.button-toolbar button:focus-within, .button-toolbar button:hover {
 	background-color: var(--colorAccentBgDark) !important;
 }
 
@@ -207,4 +207,9 @@
 /* Hide overlay info bubble + Fullscreen reminder */
 .overlayinfobubble {
 	display: none;
+}
+
+/* Width of empty spacer before tabs */
+.tabs-top #tabs-tabbar-container .toolbar-tabbar-before:empty {
+	min-width: 0px;
 }
