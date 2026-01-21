@@ -15,9 +15,7 @@
 </form> 
 
 <?php
-// outputs e.g.  somefile.txt was last modified: December 29 2002 22:16:23.
-
-echo "Image last modified: " . date ("F d Y H:i:s.", filemtime('vivaldi.jpg'));
+echo "Image last modified: " . date (DATE_RFC850, filemtime('vivaldi.jpg'));
 ?>
 
 </body>
