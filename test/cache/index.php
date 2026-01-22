@@ -8,13 +8,17 @@
 
 <img width=400 height=225 src="vivaldi.jpg">
 
+<div class="styles">Stylesheet used: <span class="style1">style1.css</span><span class="style2">style2.css</span>
+
 <form method="get" action="touch.php">
 	<p>
 		<input type="submit" value="Touch Image" alt="Touch Image">
 	</p> 
-</form> 
 
+</form> 
 <?php
+// outputs e.g.  somefile.txt was last modified: December 29 2002 22:16:23.
+
 echo "Image last modified: " . date (DATE_RFC850, filemtime('vivaldi.jpg'));
 ?>
 
