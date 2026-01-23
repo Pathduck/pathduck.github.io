@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<img width=400 height=225 src="vivaldi.jpg">
+<img width=400 height=225 src="vivaldi.jpg">
 
 <div class="styles">Stylesheet used: <span class="style1">style1.css</span><span class="style2">style2.css</span>
 
