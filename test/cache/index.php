@@ -13,9 +13,9 @@
 <form method="get" action="touch.php">
 	<p>
 		<input type="submit" value="Touch Image" alt="Touch Image">
-	</p> 
+	</p>
+</form>
 
-</form> 
 <?php
 echo "Image last modified: " . date (DATE_RFC850, filemtime('vivaldi.jpg'));
 ?>
