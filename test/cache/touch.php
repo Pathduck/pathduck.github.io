@@ -7,6 +7,6 @@ system("touch vivaldi.jpg");
 system("mv style1.css style.tmp; mv style2.css style1.css; mv style.tmp style2.css");
 system("touch style1.css");
 
-header("Location: ./");
+header("Location: ./index.php");
 
 ?>
