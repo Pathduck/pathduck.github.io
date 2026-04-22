@@ -11,9 +11,14 @@
 }
 
 /* SiteInfo old style lock */
-.SiteInfoButton.secure svg path, .SiteInfoButton.certified svg path {
-	d: path("M12.2 6.7C12.2 4 10.5 2 8 2 5.8 2 3.8 4 3.8 6.7V7H3v7h10V7h-.8v-.3zM10.7 8H5.3V6.7c0-1.7 1.4-3 2.8-3 1.7 0 2.8 1.3 2.8 3V8z");
+.SiteInfoButton.secure svg g.no-blocking path, .SiteInfoButton.certified svg g.no-blocking path {
+	d: path("M12.2 6.7C12.2 4 10.5 2 8 2 5.8 2 3.8 4 3.8 6.7V7H3v7h10V7h-.8v-.3zM10.7 8H5.3V6.7c0-1.7 1.4-3 2.8-3 1.7 0 2.8 1.3 2.8 3V8z") !important;
 	fill: #00a100;
+	stroke: unset;
+}
+
+.SiteInfoButton.secure svg g.no-blocking use, .SiteInfoButton.certified svg g.no-blocking use {
+	display: none;
 }
 
 /* SiteInfo secure background colour */
