@@ -1,8 +1,6 @@
 /* SiteInfoButton */
 .SiteInfoButton button {
 	opacity: unset !important;
-	height: 22px;
-	width: 22px;
 }
 
 /* SiteInfo V logo */
@@ -22,12 +20,12 @@
 }
 
 /* SiteInfo secure background colour */
-.SiteInfoButton.secure, .SiteInfoButton.certified {
+.SiteInfoButton.secure button, .SiteInfoButton.certified button {
 	background-color: #004400 !important;
-	border-radius: var(--radius);
+	border-radius: var(--radiusHalf) !important;
 }
 
 /* SiteInfo hide EV/Not Secure text */
-.SiteInfoButton.warning .button-badge {
+.SiteInfoButton.warning button .button-badge {
 	display: none;
 }
