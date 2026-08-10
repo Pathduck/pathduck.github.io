@@ -7,19 +7,21 @@
 	<style>body {color: white; background: darkslategray;} a {color: deepskyblue;}</style>
 </head>
 <body>
+<h2>Enumerate Devices</h2>
+<div id="div"></div>
+<script>
+var stream;
+navigator.mediaDevices.getUserMedia({ video:true })
+.then(s => (stream = s), e => console.log(e.message))
+.then(() => navigator.mediaDevices.enumerateDevices())
+.then(devices => {
+  devices.forEach(device => {
+    console.log(JSON.stringify({...device, capabilities: device.getCapabilities?.()}));    
+  })
+})
+.catch(e => console.log(e));
 
-	<!--   <iframe
-	  width="500px"
-	  height="500px"
-      allow="camera; microphone;"
-      src="https://meet.livekit.io/rooms/mnl4-edtg"
-    /> -->
-
-      <iframe
-	  width="500px"
-	  height="500px"
-      allow="camera; microphone;"
-      src="https://p2p.mirotalk.com/join/93232BasicHat"
-    />
+var console = { log: msg => div.innerHTML += msg + "<br>" };
+</script>
 </body>
 </html>
