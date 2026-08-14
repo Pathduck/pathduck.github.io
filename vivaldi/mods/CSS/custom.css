@@ -71,6 +71,7 @@
 
 /* Hide AddressField stuff */
 /*.UrlBar-AddressField .ContentBlocker-Control,*/
+.UrlBar-AddressField .PwaInstallButton,
 .UrlBar-AddressField .permission-popup.is-blocking,
 .UrlBar-AddressField .UrlBar-UrlObfuscationWarning,
 .UrlBar-AddressField .ToolbarButton-Button[title^="Translate"] {
